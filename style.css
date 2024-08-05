@@ -1,0 +1,63 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    padding:20px 0 100px 0;
+    background-image: url('images/wallpapers/tavli-wallpaper-1.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading-intro{
+    text-align: center;
+}
+
+h1.heading-intro{
+    font-size: 50px;
+}
+
+.container-1{
+    margin: 0 auto;
+    background-color: #ffffff9d; /* White with 50% transparency */
+    padding: 50px 0 50px 0;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
+
+    display: flex; /* mazi me tis apo katw kentraroun ola ta items tou container*/
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-1-1{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+
+}
+.container-1-2{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+
+}
+.container-1-3{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+
+}
+.container-1-4{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+
+}
+
+.container-titles{
+    text-align: center;
+}
+
+.img-home-games{
+    width: 100%;
+    border-radius: 10px;
+}
