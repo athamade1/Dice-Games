@@ -1,0 +1,96 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    padding:20px 0 100px 0;
+    background-image: url('../images/wallpapers/2dices-wallpaper.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading-intro-2zaria{
+    text-align: center;
+}
+
+h1.heading-intro-2zaria{
+    font-size: 50px;
+}
+
+.container-2zaria{
+    margin: 0 auto;
+    background-color: #ffffff9d; /* White with 50% transparency */
+    padding: 50px 0 50px 0;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.container-1-1-2zaria{
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.container-1-2-2zaria{
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-dice-1, .img-dice-2{
+    width: 10%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.095); /* Example box shadow */
+
+}
+
+
+.h3-dice-score-2zaria{
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn-roll-dice-2zaria{
+    background-color: aqua;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+.btn-roll-dice-2zaria:hover{
+    background-color: blueviolet;
+    
+}
+
+.btn-clear-2zaria{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+.btn-clear-2zaria:hover{
+    background-color: red;
+}
+
+.btn-history{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(120, 243, 80);
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+
+.btn-history:hover{
+    background-color: rgb(193, 220, 88);
+}
