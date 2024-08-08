@@ -9,6 +9,45 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+/*  header */
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #87CEEB; /*  color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.1s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1E90FF; /* hover */
+}
 
 .heading-intro{
     text-align: center;
@@ -63,3 +102,73 @@ h1.heading-intro{
     width: 100%;
     border-radius: 10px;
 }
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    text-align: left; /*  στοιχεια left */
+    margin-top: 20px;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.footer-bottom li {
+    display: inline;
+    margin-right: 10px; 
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the social media links */
+.social-media ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Οριζόντιo */
+    align-items: center; /* kentro */
+}
+
+.social-media ul li {
+    margin-left: 20px; 
+}
+
+.social-media ul li a {
+    color: #87CEEB; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.1s ease;
+}
+
+.social-media ul li a:hover {
+    color: #1E90FF; 
+}
+
+.social-media ul li a i {
+    margin-right: 8px; 
+}
+
