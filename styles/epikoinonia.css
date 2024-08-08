@@ -1,0 +1,89 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    padding:20px 0 100px 0;
+    background-image: url('../images/wallpapers/tavli-wallpaper-1.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading-intro-info{
+    text-align: center;
+}
+
+h1.heading-intro-info{
+    font-size: 50px;
+}
+
+.contact-container{
+    margin: 0 auto;
+    background-color: #ffffff9d; /* White with 50% transparency */
+    padding: 50px 0 50px 0;
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
+
+    display: flex; /* mazi me tis apo katw kentraroun ola ta items tou container*/
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.contact-container-1{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 228, 196, 0.590);
+    
+}
+
+ul {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;            /* Removes default padding */
+    margin: 0;             /* Removes default margin */
+    text-decoration: none;
+}
+
+li {
+    display: flex;         /* Makes list items display inline */
+    align-items: center;   /* Vertically centers the icon and text */
+    margin-bottom: 10px;   /* Adds some spacing between list items */
+
+}
+
+/* Styling for the links and icons */
+.contact-info a, .links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 8px; /* Adds space between the icon and the link text */
+}
+
+.contact-info a:hover, .links a:hover, .more-info a:hover {
+    text-decoration: underline;
+}
+
+
+.contact-info i, .links i {
+    margin-right: 8px; /* Adds space between the icon and the link text */
+}
+
+
+.contact-container-2{
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    background-color:  rgba(255, 228, 196, 0.590);
+    margin-bottom: 150px;
+
+}
+
+
+.more-info a {
+    color: black;
+    text-decoration: none;
+    margin-left: 8px; /* Adds space between the icon and the link text */  
+
+}
+
+
