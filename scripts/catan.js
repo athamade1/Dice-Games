@@ -57,22 +57,22 @@ function rollTheDice(dice1, dice2,dice3){
 
     switch (dice2){
         case 1:
-            imgDice2El.src = '../images/dice-1.png';
+            imgDice2El.src = '../images/dice-red-1.png';
             break;
         case 2:
-            imgDice2El.src = '../images/dice-2.png';
+            imgDice2El.src = '../images/dice-red-2.png';
             break;
         case 3:
-            imgDice2El.src = '../images/dice-3.png';
+            imgDice2El.src = '../images/dice-red-3.png';
             break;
         case 4:
-            imgDice2El.src = '../images/dice-4.png';
+            imgDice2El.src = '../images/dice-red-4.png';
             break;
         case 5:
-            imgDice2El.src = '../images/dice-5.png';
+            imgDice2El.src = '../images/dice-red-5.png';
             break;
         case 6:
-            imgDice2El.src = '../images/dice-6.png';
+            imgDice2El.src = '../images/dice-red-6.png';
             break;
     }
 
@@ -102,5 +102,5 @@ function init(){
     console.log('init() function run successfully');
     h3DiceScoreEl.textContent = 'Ρίξε τα ζάρια';
     imgDice1El.src = '../images/dice-1.png';
-    imgDice2El.src = '../images/dice-1.png';
+    imgDice2El.src = '../images/dice-red-1.png';
 }

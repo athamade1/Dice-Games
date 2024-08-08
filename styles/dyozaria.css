@@ -51,10 +51,10 @@ h1.heading-intro-2zaria{
     gap: 20px;
 }
 
-.img-dice-1, .img-dice-2{
+.img-dice-1-2zaria, .img-dice-2-2zaria{
     width: 10%;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.095); /* Example box shadow */
+    box-shadow: 10px 10px 5px #888888;
 
 }
 
