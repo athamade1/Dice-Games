@@ -5,8 +5,10 @@ let btnRollDice2zariaEl  = document.querySelector('.btn-roll-dice-2zaria');
 let btnClear2zariaEl  = document.querySelector('.btn-clear-2zaria');
 
 let btnHistoryEl = document.querySelector('.btn-history');
-let historyContainerEl = document.querySelector('.history-container');
 let historyListEl = document.querySelector('.history-list');
+let popupOverlayEl = document.querySelector('.popup-overlay');
+let historyPopupEl = document.querySelector('.popup');
+let closePopupEl = document.querySelector('.close-btn');
 
 let diceHistory = [];
 
@@ -35,14 +37,16 @@ btnRollDice2zariaEl.addEventListener('click', function(){
 btnClear2zariaEl.addEventListener('click', function(){
     console.log('btn clear clicked');
     diceHistory = [];
-    historyContainerEl.style.display = 'none';
+    popupOverlayEl.style.display = 'none';
+    historyPopupEl.style.display = 'none';
     historyListEl.innerHTML = '';
     init();
 });
 
 btnHistoryEl.addEventListener('click', function(){
     console.log('btnHistory Clicked');
-    historyContainerEl.style.display = 'block';
+    popupOverlayEl.style.display = 'block';
+    historyPopupEl.style.display = 'block';
     historyListEl.innerHTML = ''; // Καθαρισμός της λίστας πριν την ενημέρωση
 
     diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
@@ -50,6 +54,16 @@ btnHistoryEl.addEventListener('click', function(){
         listItem.textContent = `Roll ${index + 1}: Dice 1 = ${entry.dice1}, Dice 2 = ${entry.dice2}, Sum = ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
         historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
     });
+});
+
+closePopupEl.addEventListener('click', function() {
+    popupOverlayEl.style.display = 'none';
+    historyPopupEl.style.display = 'none';
+});
+
+popupOverlayEl.addEventListener('click', function() {
+    popupOverlayEl.style.display = 'none';
+    historyPopupEl.style.display = 'none';
 });
 
 
