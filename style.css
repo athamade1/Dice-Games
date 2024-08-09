@@ -3,17 +3,48 @@
 }
 
 body{
-    padding:20px 0 100px 0;
+ margin: 0;
+    
+}
+
+.main-container{
+    padding: 50px 0 100px 0;
     background-image: url('images/wallpapers/tavli-wallpaper-1.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*  header */
+
+
+/* ------------------------- header starts here-------------------------*/
 header {
-    background-color: #4CAF50;
-    padding: 10px;
+    /* background-color: #4CAF50; */
+    background-image: url('images/wallpapers/tavli-wallpaper-2.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 50px 0;
+
+    position: relative; /* Αυτό είναι απαραίτητο για να τοποθετηθεί σωστά το overlay */
+    z-index: 1; /* Βεβαιώσου ότι το header είναι πάνω από το overlay */
 }
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Μαύρο overlay με 50% διαφάνεια */
+    backdrop-filter: blur(10px); /* Blur στο overlay */
+    z-index: -1; /* Τοποθετεί το overlay πίσω από το περιεχόμενο του header */
+    border-radius: inherit; /* Διατήρηση των border-radius του header αν υπάρχουν */
+  }
+  
+  header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Border shadow κάτω από το header */
+  }
 
 .header-container {
     display: flex;
@@ -48,6 +79,9 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #1E90FF; /* hover */
 }
+/* ------------------------- header ends here-------------------------*/
+
+
 
 .heading-intro{
     text-align: center;
@@ -82,10 +116,12 @@ h1.heading-intro{
 
 }
 .container-1-3{
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px;
     border-radius: 10px;
     width: 200%; 
-    height: auto;
+    height: auto; */
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
 
 }
 .container-1-4{
