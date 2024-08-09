@@ -4,6 +4,7 @@ let imgDice2El  = document.querySelector('.img-dice-2');
 let imgDice3El  = document.querySelector('.img-dice-3');
 let btnRollDiceEl  = document.querySelector('.btn-roll-dice');
 let btnClearEl  = document.querySelector('.btn-clear');
+let h3NumberOfPiratesEl = document.querySelector('.h3-number-of-pirates');
 
 
 init();

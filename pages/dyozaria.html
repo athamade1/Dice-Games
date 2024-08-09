@@ -7,45 +7,52 @@
     <link rel="stylesheet" href="../styles/dyozaria.css">
 </head>
 <body>
+    <!-- Header menu starts here -->
     <header>
-    <div class="header-container">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="enazari.html">One Dice</a></li>
-                <li><a href="dyozaria.html">Two Dices</a></li>
-                <li><a href="tavli.html">Checkers</a></li>
-                <li><a href="epikoinwnia.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-    <h3 class="heading-intro-2zaria">Παιχνίδι με</h3>
-    <h1 class="heading-intro-2zaria">2 ΖΑΡΙΑ</h1>
-    <div class="container-2zaria">
-        <h3 class="h3-dice-score-2zaria">Ρίξε τα ζάρια</h3>
-        <div class="container-1-1-2zaria">
-            <img class="img-dice-1-2zaria" src="../images/dice-1.png" alt="dice games dice">
-            <img class="img-dice-2-2zaria" src="../images/dice-red-1.png" alt="dice games dice tavli">
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Αρχική</a></li>
+                    <li><a href="#">Σχετικά με εμάς</a></li>
+                    <li><a href="tavli.html">Τάβλι</a></li>
+                    <li><a href="enazari.html">Ένα Ζάρι</a></li>
+                    <li><a href="dyozaria.html">Δύο Ζάρια</a></li>                
+                    <li><a href="epikoinonia.html">Επικοινωνία</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="container-1-2-2zaria">
-            <button class="btn-roll-dice-2zaria">Roll the Dice</button>
-            <button class="btn-clear-2zaria">Clear</button>
-            <button class="btn-history">History</button>
-            
-            <!-- HISTORY POP UP MENU STARTS HERE -->
-            <div class="popup-overlay"></div>
-            <div class="popup">
-              <button class="close-btn">X</button>
-              <ul class="history-list"></ul>
-            </div>
-            <!-- HISTORY POP UP MENU ENDS HERE -->
+    </header>
+    <!-- Header menu ends here -->
 
-        </div> 
-               
+
+    <div class="main-container">
+        <h3 class="heading-intro-2zaria">Παιχνίδι με</h3>
+        <h1 class="heading-intro-2zaria">2 ΖΑΡΙΑ</h1>
+        <div class="container-2zaria">
+            <h3 class="h3-dice-score-2zaria">Ρίξε τα ζάρια</h3>
+            <div class="container-1-1-2zaria">
+                <img class="img-dice-1-2zaria" src="../images/dice-1.png" alt="dice games dice">
+                <img class="img-dice-2-2zaria" src="../images/dice-red-1.png" alt="dice games dice tavli">
+            </div>
+            <div class="container-1-2-2zaria">
+                <button class="btn-roll-dice-2zaria">Roll the Dice</button>
+                <button class="btn-clear-2zaria">Clear</button>
+                <button class="btn-history">History</button>
+                
+                <!-- HISTORY POP UP MENU STARTS HERE -->
+                <div class="popup-overlay"></div>
+                <div class="popup">
+                <button class="close-btn">X</button>
+                <ul class="history-list"></ul>
+                </div>
+                <!-- HISTORY POP UP MENU ENDS HERE -->
+
+            </div> 
+                
+        </div>
+        <script src="../scripts/dyozaria.js"></script>
     </div>
-    <script src="../scripts/dyozaria.js"></script>
+
     <footer>     
         <div class="contact-info">
             <h4>Επικοινωνήστε μαζί μας</h4>
