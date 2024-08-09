@@ -83,3 +83,47 @@ h1.heading-intro{
 .btn-clear:hover{
     background-color: red;
 }
+.btn-history{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(120, 243, 80);
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+
+.btn-history:hover{
+    background-color: rgb(193, 220, 88);
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
