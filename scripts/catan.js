@@ -1,9 +1,11 @@
 let h3DiceScoreEl = document.querySelector('.h3-dice-score');
+let scorepiratesEl= document.querySelector('.score');
 let imgDice1El  = document.querySelector('.img-dice-1');
 let imgDice2El  = document.querySelector('.img-dice-2');
 let imgDice3El  = document.querySelector('.img-dice-3');
 let btnRollDiceEl  = document.querySelector('.btn-roll-dice');
 let btnClearEl  = document.querySelector('.btn-clear');
+
 
 let btnHistoryEl = document.querySelector('.btn-history');
 let historyListEl = document.querySelector('.history-list');
@@ -12,7 +14,8 @@ let historyPopupEl = document.querySelector('.popup');
 let closePopupEl = document.querySelector('.close-btn');
 
 let diceHistory = [];
-let pirate;
+var pirate=0;
+
 
 init();
 
@@ -31,9 +34,9 @@ btnRollDiceEl.addEventListener('click', function(){
     h3DiceScoreEl.textContent = dice1 + dice2;
 
 
-
     rollTheDice(dice1,dice2,dice3);
     diceHistory.push({ dice1, dice2, test });
+    scorepiratesEl.textContent=pirate;
 
     
 });
@@ -44,6 +47,7 @@ btnClearEl.addEventListener('click', function(){
     popupOverlayEl.style.display = 'none';
     historyPopupEl.style.display = 'none';
     historyListEl.innerHTML = '';
+
     init();
 });
 btnHistoryEl.addEventListener('click', function(){
@@ -56,6 +60,9 @@ btnHistoryEl.addEventListener('click', function(){
         let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
         listItem.textContent = `Roll ${index + 1}: Dice 1 = ${entry.dice1}, Dice 2 = ${entry.dice2}, Dice 3 ${entry.test}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
         historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
+    
+   // console.log(pirate);
+    
     });
 });
 
@@ -72,6 +79,8 @@ popupOverlayEl.addEventListener('click', function() {
 
 function rollTheDice(dice1, dice2,dice3){
     console.log('rollthedice function run successfully')
+    document.querySelector('.container').style.backgroundColor='transparent';
+
     switch (dice1){
         case 1:
             imgDice1El.src = '../images/dice-1.png';
@@ -118,31 +127,58 @@ function rollTheDice(dice1, dice2,dice3){
         imgDice3El.src = '../images/yellow.png';
         test='yellow';
 
+
       } else if (dice3 === 2) {
         imgDice3El.src = '../images/green.png';
         test='green'
+
          
       } else if (dice3 === 3) {
         imgDice3El.src = '../images/blue.png';
         test='blue';
 
+
       } else if (dice3 === 4) {
         imgDice3El.src = '../images/pirate.png';
         test='pirate'
+        pirate++
+
         
       } else if (dice3 === 5) {
         imgDice3El.src = '../images/pirate.png';
         test='pirate'
-        
+        pirate++
+
       } else {
         imgDice3El.src = '../images/pirate.png';
         test='pirate'
+        pirate++
+
       } 
+      if (pirate===7){
+        
+        
+        init();
+        document.querySelector('.container').style.backgroundColor='red';
+        
+        
+        
+
+
+      }
+      
 }
 
 function init(){
     console.log('init() function run successfully');
     h3DiceScoreEl.textContent = 'Ρίξε τα ζάρια';
+    
+    document.querySelector('.container').style.backgroundColor='transparent';
+    scorepiratesEl.textContent=0;
+    pirate=0;
+    
+    
     imgDice1El.src = '../images/dice-1.png';
     imgDice2El.src = '../images/dice-red-1.png';
+    imgDice3El.src = "../images/pirate.png";
 }
