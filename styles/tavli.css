@@ -60,6 +60,20 @@ header::before {
     color: white;
 }
 
+.logo-container{
+
+    width: 10%;
+}
+
+.imglogo{
+    width: 100%;
+}
+
+.nav-container{
+    padding-left: 50px;
+
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;

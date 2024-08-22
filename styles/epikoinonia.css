@@ -13,7 +13,7 @@ body{
 /* ------------------------- header starts here-------------------------*/
 header {
     /* background-color: #4CAF50; */
-    background-image: url('images/wallpapers/tavli-wallpaper-2.webp');
+    background-image: url('../images/wallpapers/tavli-wallpaper-2.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,6 +48,20 @@ header::before {
     margin: 0 auto;
     padding: 0 20px;
     color: white;
+}
+
+.logo-container{
+
+    width: 10%;
+}
+
+.imglogo{
+    width: 100%;
+}
+
+.nav-container{
+    padding-left: 50px;
+
 }
 
 nav ul {

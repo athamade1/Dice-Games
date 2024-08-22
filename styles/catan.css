@@ -59,6 +59,20 @@ header::before {
     color: white;
 }
 
+.logo-container{
+
+    width: 10%;
+}
+
+.imglogo{
+    width: 100%;
+}
+
+.nav-container{
+    padding-left: 50px;
+
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -83,7 +97,6 @@ nav ul li a:hover {
     background-color: #1E90FF; /* hover */
 }
 /* ------------------------- header ends here-------------------------*/
-
 
 .heading-intro{
     text-align: center;
