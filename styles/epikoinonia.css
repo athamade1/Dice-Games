@@ -90,6 +90,53 @@ nav ul li a:hover {
 /* ------------------------- header ends here-------------------------*/
 
 
+/*------------------------- παιχνιδια submenu starts here-------------------------*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white; /* Μπορείς να αλλάξεις το χρώμα αν θες */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li:hover ul.submenu {
+    display: block;
+}
+
+nav ul li ul.submenu li {
+    display: block;
+}
+
+nav ul li ul.submenu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: black; /* Μπορείς να αλλάξεις το χρώμα αν θες */
+}
+
+nav ul li ul.submenu li a:hover {
+    background-color: #ddd; /* Μπορείς να αλλάξεις το χρώμα αν θες */
+}
+/*------------------------- παιχνιδια submenu ends here-------------------------*/
+
+
+
+
 .heading-intro-info{
     text-align: center;
 }
