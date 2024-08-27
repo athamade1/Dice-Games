@@ -1,0 +1,217 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    margin: 0;
+    /* padding:40px 0 100px 0;
+    background-image: url('../images/wallpapers/catan.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.main-container{
+    padding:20px 0 100px 0;
+    background-image: url('../images/wallpapers/Catan.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------- header starts here-------------------------*/
+header {
+    /* background-color: #4CAF50; */
+    background-image: url('../images/wallpapers/tavli-wallpaper-2.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 50px 0;
+
+    position: relative; /* Αυτό είναι απαραίτητο για να τοποθετηθεί σωστά το overlay */
+    z-index: 1; /* Βεβαιώσου ότι το header είναι πάνω από το overlay */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Μαύρο overlay με 50% διαφάνεια */
+    backdrop-filter: blur(10px); /* Blur στο overlay */
+    z-index: -1; /* Τοποθετεί το overlay πίσω από το περιεχόμενο του header */
+    border-radius: inherit; /* Διατήρηση των border-radius του header αν υπάρχουν */
+  }
+  
+  header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Border shadow κάτω από το header */
+  }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo-container{
+
+    width: 10%;
+}
+
+.imglogo{
+    width: 100%;
+}
+
+.nav-container{
+    padding-left: 50px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #87CEEB; /*  color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.1s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1E90FF; /* hover */
+}
+/* ------------------------- header ends here-------------------------*/
+
+.heading-intro{
+    text-align: center;
+}
+
+h1.heading-intro{
+    font-size: 50px;
+}
+
+.container{
+    margin: 0 auto;
+    background-color: #ffffff9d; /* White with 50% transparency */
+    padding: 50px 0 50px 0;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
+    background-color: rgba(255, 255, 0, 0.5);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.container-1-1{
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.container-1-2{
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-dice-1, .img-dice-2,.img-dice-3{
+    width: 10%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.095); /* Example box shadow */
+
+}
+
+
+.h3-dice-score, .h3-dice-score-pirates{
+    text-align: center;
+    font-size: 30px;
+}
+
+.btn-roll-dice{
+    background-color: aqua;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+.btn-roll-dice:hover{
+    background-color: blueviolet;
+    
+}
+
+.btn-clear{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+.btn-clear:hover{
+    background-color: red;
+}
+.btn-history{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(120, 243, 80);
+    transition: background-color 0.5s ease; /* Add this line for the transition */
+}
+
+.btn-history:hover{
+    background-color: rgb(193, 220, 88);
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
