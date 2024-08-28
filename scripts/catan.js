@@ -17,6 +17,16 @@ let diceHistory = [];
 var pirate=0;
 
 
+function playMusic1(){
+    var music1 = new Audio('../sound/sound_check.mp3');
+    music1.play();
+    }
+
+function playMusic2(){
+    var music2 = new Audio('../sound/7pirates.wav');
+    music2.play();
+    }
+
 init();
 
 
@@ -32,7 +42,8 @@ btnRollDiceEl.addEventListener('click', function(){
 
     console.log(`dice 1 : ${dice1} / dice 2 : ${dice2} / dice 3 : ${dice3} // sum = ${dice1+dice2}`);
     h3DiceScoreEl.textContent = dice1 + dice2;
-
+    playMusic1();
+        
 
     rollTheDice(dice1,dice2,dice3);
     diceHistory.push({ dice1, dice2, test });
@@ -157,7 +168,7 @@ function rollTheDice(dice1, dice2,dice3){
 
       } 
       if (pirate===7){
-        
+        playMusic2();
         
         init();
         document.querySelector('.container').style.backgroundColor='red';
