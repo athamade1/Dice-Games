@@ -202,124 +202,81 @@ h1.heading-intro{
 }
 /* footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative; 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.contact-info {
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    padding: 0px; 
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
 }
 
-.footer-bottom {
-    text-align: left; 
-    margin-top: 10px;
+.footer-section.contact,
+.footer-section.links,
+.footer-section.games {
+  text-align: left;
 }
 
-.footer-bottom ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; 
+.footer-logo {
+  width: 100px; 
+  margin-bottom: 10px;
 }
 
-.footer-bottom li {
-    display: inline;
-    margin-right: 10px; 
+.footer-section.links .social-links {
+  margin: 10px 0;
 }
 
-.footer-bottom a {
-    color: #fff;
-    text-decoration: none;
+.footer-section.links .social-links a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
-.footer-bottom a:hover {
-    text-decoration: underline;
+.footer-section a {
+  color: #00f;
+  text-decoration: none;
 }
 
-
-/* Styling for the social media links */
-.social-media ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Οριζόντιo */
-    align-items: center; /* kentro */
+.footer-section a:hover {
+  text-decoration: underline;
 }
 
-.social-media ul li {
-    margin-left: 20px; 
+.rate-me {
+  display: block;
+  margin-top: 10px;
+  color: #00f;
 }
 
-.social-media ul li a {
-    color: #87CEEB; 
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.1s ease;
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.social-media ul li a:hover {
-    color: #1E90FF; 
+.footer-section.games ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.social-media ul li a i {
-    margin-right: 8px; 
+.footer-section.games ul li {
+  margin-bottom: 5px;
 }
 
-
-.footer-bottom li {
-    display: inline;
-    margin-right: 10px; 
+.footer-section.games ul li a {
+  color: #00f;
+  text-decoration: none;
 }
 
-.footer-bottom a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for the social media links */
-.social-media ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* Οριζόντιo */
-    align-items: center; /* kentro */
-}
-
-.social-media ul li {
-    margin-left: 20px; 
-}
-
-.social-media ul li a {
-    color: #87CEEB; 
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.1s ease;
-}
-
-.social-media ul li a:hover {
-    color: #1E90FF; 
-}
-
-.social-media ul li a i {
-    margin-right: 8px; 
+.footer-section.games ul li a:hover {
+  text-decoration: underline;
 }
 
