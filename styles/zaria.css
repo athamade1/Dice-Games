@@ -369,3 +369,54 @@ h1.heading-intro{
 }
 
 /* ---------------History and popup menu ends here----------------- */
+
+/*----------------Responsive for phones code starts here-----------*/
+
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .logo-container {
+        width: 30%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1.heading-intro {
+        font-size: 30px;
+    }
+
+    .img-dice,
+    .img-dice2,
+    .img-dice3,
+    .img-dice4 {
+        width: 40%;
+    }
+
+    .container-1-1-1,
+    .container-1-1-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-buttons {
+        align-items: normal;
+    }
+
+    .btn-1-dice,
+    .btn-2-dice,
+    .btn-3-dice,
+    .btn-4-dice,
+    .btn-roll-dice,
+    .btn-clear,
+    .btn-history {
+        width: 20%;
+        text-align: center;
+    }
+}
+
+/*----------------Responsive for phones code ends here-----------*/
