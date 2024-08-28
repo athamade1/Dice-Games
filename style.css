@@ -139,6 +139,10 @@ nav ul li ul.submenu li a:hover {
 }
 /*------------------------- παιχνιδια submenu ends here-------------------------*/
 
+.image-for-hero-section{
+  width: 6%;
+}
+
 .heading-intro{
     text-align: center;
 }
