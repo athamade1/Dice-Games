@@ -5,6 +5,7 @@ let imgDice2El  = document.querySelector('.img-dice-2');
 let imgDice3El  = document.querySelector('.img-dice-3');
 let btnRollDiceEl  = document.querySelector('.btn-roll-dice');
 let btnClearEl  = document.querySelector('.btn-clear');
+let btnSoundEl = document.querySelector('.play');
 
 
 let btnHistoryEl = document.querySelector('.btn-history');
@@ -15,12 +16,32 @@ let closePopupEl = document.querySelector('.close-btn');
 
 let diceHistory = [];
 var pirate=0;
+let flag=0;
 
 
 function playMusic1(){
     var music1 = new Audio('../sound/sound_check.mp3');
-    music1.play();
+    
+    btnSoundEl.addEventListener('click',function(){
+        flag=1;
+        console.log('sound pressed');})
+        
+    
+    if (flag==1){
+        music1.pause();
+        
     }
+    else{
+        music1.play();
+
+    }
+
+        
+    
+    
+    
+    
+}
 
 function playMusic2(){
     var music2 = new Audio('../sound/7pirates.wav');
@@ -58,7 +79,7 @@ btnClearEl.addEventListener('click', function(){
     popupOverlayEl.style.display = 'none';
     historyPopupEl.style.display = 'none';
     historyListEl.innerHTML = '';
-
+    flag=0;
     init();
 });
 btnHistoryEl.addEventListener('click', function(){
@@ -169,7 +190,7 @@ function rollTheDice(dice1, dice2,dice3){
       } 
       if (pirate===7){
         playMusic2();
-        
+        flag=0;
         init();
         document.querySelector('.container').style.backgroundColor='red';
         

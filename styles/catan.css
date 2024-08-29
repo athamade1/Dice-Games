@@ -209,12 +209,12 @@ h1.heading-intro{
     
 }
 
-.btn-clear{
+.btn-clear,.play{
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     transition: background-color 0.5s ease; /* Add this line for the transition */
 }
-.btn-clear:hover{
+.btn-clear:hover,.play:hover{
     background-color: red;
 }
 .btn-history{
