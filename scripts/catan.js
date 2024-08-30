@@ -16,37 +16,54 @@ let closePopupEl = document.querySelector('.close-btn');
 
 let diceHistory = [];
 var pirate=0;
-let flag=0;
+var flag=0; //flag = 1 symainei mute sound
 
 
+
+//----------ixos gia zaria starts here----------------
 function playMusic1(){
+
     var music1 = new Audio('../sound/sound_check.mp3');
-    
-    btnSoundEl.addEventListener('click',function(){
-        flag=1;
-        console.log('sound pressed');})
-        
-    
+
     if (flag==1){
         music1.pause();
-        
+        console.log('dice sound OFF');
     }
     else{
         music1.play();
-
+        console.log('dice sound ON');
     }
 
-        
-    
-    
-    
-    
 }
+//----------ixos gia zaria ends here----------------
 
+//----------koumpi gia anoigma kleisimo ixou starts here--------
+btnSoundEl.addEventListener('click',function(){
+    if (flag==0){
+        flag=1;
+        console.log("btn sound clicked / sound OFF");
+    } else {
+        flag=0;
+        console.log("btn sound clicked / sound ON");
+    }
+})
+//----------koumpi gia anoigma kleisimo ixou ends here--------
+
+//----------ixos gia peirates starts here----------------
 function playMusic2(){
     var music2 = new Audio('../sound/7pirates.wav');
-    music2.play();
+    // music2.play();
+    if (flag==1){
+        music2.pause();
+        console.log('pirates sound OFF');
     }
+    else{
+        music2.play();
+        console.log('pirates sound ON');
+    }
+}
+//----------ixos gia peirates ends here----------------
+
 
 init();
 
@@ -190,13 +207,10 @@ function rollTheDice(dice1, dice2,dice3){
       } 
       if (pirate===7){
         playMusic2();
-        flag=0;
-        init();
+        // flag=0;
+        // init();
+        pirate=0;  //prepei na allaksei se synarthsh
         document.querySelector('.container').style.backgroundColor='red';
-        
-        
-        
-
 
       }
       
