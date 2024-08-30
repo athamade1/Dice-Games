@@ -209,12 +209,33 @@ h1.heading-intro{
     
 }
 
-.btn-clear,.play{
+.play {
+    padding: 10px;
+    margin-right: 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    float: right; /* Aligns the button to the right */
+    background-color: white; /* Initial background color */
+    color: black; /* Icon color */
+}
+
+.play .fas {
+    font-size: 20px;
+}
+
+.play.muted {
+    background-color: red; /* Background color when muted (button is active) */
+    color: white; /* Icon color when muted */
+}
+
+.btn-clear{
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     transition: background-color 0.5s ease; /* Add this line for the transition */
 }
-.btn-clear:hover,.play:hover{
+.btn-clear:hover{
     background-color: red;
 }
 .btn-history{
@@ -261,3 +282,85 @@ h1.heading-intro{
     font-size: 16px;
     cursor: pointer;
 }
+
+
+
+/* footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-section.contact,
+  .footer-section.links,
+  .footer-section.games {
+    text-align: left;
+  }
+  
+  .footer-logo {
+    width: 100px; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-section.links .social-links {
+    margin: 10px 0;
+  }
+  
+  .footer-section.links .social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-section a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .rate-me {
+    display: block;
+    margin-top: 10px;
+    color: #00f;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section.games ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section.games ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section.games ul li a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section.games ul li a:hover {
+    text-decoration: underline;
+  }

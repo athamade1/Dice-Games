@@ -8,6 +8,7 @@
     <link rel="icon" href="../images/logo.pirate.jpeg" type="image/png">
     <!--FAVICON ENDS HERE-->
     <link rel="stylesheet" href="../styles/catan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -54,6 +55,12 @@
 
 
         <div class="container">
+
+            <button class="play" id="soundButton">
+                <i class="fas fa-volume-up"></i>
+            </button>
+
+            <br>
             <h3 class="h3-dice-score">Ρίξε τα ζάρια</h3>
             <h3 class="h3-dice-score-pirates">Αριθμός πειρατών <span class="score" >0</span></h3>
             
@@ -67,7 +74,7 @@
                 <button class="btn-roll-dice">Roll the Dice</button>
                 <button class="btn-clear">Clear</button>
                 <button class="btn-history">History</button>
-                <button class="play">Sound</button>
+                
                 <div class="popup-overlay"></div>
                 <div class="popup">
                     <button class="close-btn">X</button>
@@ -79,6 +86,51 @@
         </div>
 
     </div>
+
+
+    <!-- footer menu starts here -->
+<footer>
+    <div class="footer-container">
+      <!-- Left section -->
+      <div class="footer-section contact">
+        <a href="../index.html">
+          <img src="../images/logo.pirate.transparent.png" alt="pirate's skull eating a dice" class="footer-logo">
+        </a>
+        <p>Copyright © 2024 Dice Games<br>Powered by Ethan Mademlis</p>
+        
+      </div>
+  
+      <!-- Center section -->
+      <div class="footer-section links">
+        <h4>Επικοινωνία</h4>
+        <div class="social-links">
+          <p>📧 <a href="mailto:rollthedice@gmail.com">rollthedice@gmail.com</a></p>
+          <p>📧 <a href="tel:+306943080823">+30 694 308 0823</a></p>
+        </div>
+        
+      </div>
+  
+      <div class="footer-section links">
+          <h4>Χρήσιμοι Σύνδεσμοι</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+          <a href="#">Πολιτική Απορρήτου</a>
+        </div>
+  
+      <!-- Right section -->
+      <div class="footer-section games">
+        <h4>Games</h4>
+        <li><a href="../pages/zaria.html">Ζάρια</a></li>
+        <li><a href="../pages/catan.html">Κατάν</a></li>
+        <li><a href="#">Dungeons & Dragons</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- footer menu ends here -->
 
 </body>
 

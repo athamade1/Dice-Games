@@ -224,8 +224,19 @@ function init(){
     scorepiratesEl.textContent=0;
     pirate=0;
     
-    
     imgDice1El.src = '../images/dice-1.png';
     imgDice2El.src = '../images/dice-red-1.png';
     imgDice3El.src = "../images/pirate.png";
+
+    const soundButton = document.getElementById('soundButton');
+    soundButton.classList.remove('muted'); // Remove the muted class to reset color
+}
+
+function initAfterPirates(){
+    console.log('initAfterPirates() function run successfully');
+    document.querySelector('.container').style.backgroundColor='transparent';
+    scorepiratesEl.textContent=0;
+    
+    pirate=0;
+    
 }
