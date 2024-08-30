@@ -209,12 +209,33 @@ h1.heading-intro{
     
 }
 
-.btn-clear,.play{
+.play {
+    padding: 10px;
+    margin-right: 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    float: right; /* Aligns the button to the right */
+    background-color: white; /* Initial background color */
+    color: black; /* Icon color */
+}
+
+.play .fas {
+    font-size: 20px;
+}
+
+.play.muted {
+    background-color: red; /* Background color when muted (button is active) */
+    color: white; /* Icon color when muted */
+}
+
+.btn-clear{
     padding: 10px 10px 10px 10px;
     border-radius: 10px;
     transition: background-color 0.5s ease; /* Add this line for the transition */
 }
-.btn-clear:hover,.play:hover{
+.btn-clear:hover{
     background-color: red;
 }
 .btn-history{

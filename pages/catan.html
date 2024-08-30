@@ -8,6 +8,7 @@
     <link rel="icon" href="../images/logo.pirate.jpeg" type="image/png">
     <!--FAVICON ENDS HERE-->
     <link rel="stylesheet" href="../styles/catan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -54,6 +55,12 @@
 
 
         <div class="container">
+
+            <button class="play" id="soundButton">
+                <i class="fas fa-volume-up"></i>
+            </button>
+
+            <br>
             <h3 class="h3-dice-score">Ρίξε τα ζάρια</h3>
             <h3 class="h3-dice-score-pirates">Αριθμός πειρατών <span class="score" >0</span></h3>
             
@@ -67,7 +74,7 @@
                 <button class="btn-roll-dice">Roll the Dice</button>
                 <button class="btn-clear">Clear</button>
                 <button class="btn-history">History</button>
-                <button class="play">Sound</button>
+                
                 <div class="popup-overlay"></div>
                 <div class="popup">
                     <button class="close-btn">X</button>
