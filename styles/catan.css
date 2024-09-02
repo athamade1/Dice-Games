@@ -365,6 +365,22 @@ footer {
     text-decoration: underline;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /*----------------Responsive for phones code starts here-----------*/
 
 @media only screen and (max-width: 768px) {
@@ -389,7 +405,7 @@ footer {
     }
 
     .logo-container {
-        width: 30%;
+        width: 25%;
     }
 
     .nav-container {
@@ -477,6 +493,10 @@ footer {
 
     nav ul li ul.submenu li a:hover{
         background-color: #1E90FF;
+    }
+
+    .popup{
+        width: 75%;
     }
    
 }

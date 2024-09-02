@@ -468,6 +468,10 @@ h1.heading-intro{
     nav ul li ul.submenu li a:hover{
         background-color: #1E90FF;
     }
+
+    .popup{
+        width: 70%;
+    }
 }
 
 /*----------------Responsive for phones code ends here-----------*/
