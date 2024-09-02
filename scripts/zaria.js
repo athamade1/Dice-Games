@@ -448,6 +448,7 @@ function init(){
     console.log('init() function run successfully');
     h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
     diceHistory = [];
+    
     flag = false;
     const soundButton = document.getElementById('soundButton');
     soundButton.classList.remove('muted'); // Remove the muted class to reset color
