@@ -209,6 +209,8 @@ h1.heading-intro{
     
 }
 
+
+/* -------------------SOUND BUTTON STARTS HERE------------------- */
 .play {
     padding: 10px;
     margin-right: 25px;
@@ -229,6 +231,7 @@ h1.heading-intro{
     background-color: red; /* Background color when muted (button is active) */
     color: white; /* Icon color when muted */
 }
+/* -------------------SOUND BUTTON ENDS HERE------------------- */
 
 .btn-clear{
     padding: 10px 10px 10px 10px;

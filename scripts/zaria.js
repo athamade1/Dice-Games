@@ -3,6 +3,8 @@ let btn2DiceEl = document.querySelector('.btn-2-dice');
 let btn3DiceEl = document.querySelector('.btn-3-dice');
 let btn4DiceEl = document.querySelector('.btn-4-dice');
 
+let btnSoundEl = document.querySelector('.play');
+
 let h3DiceScoreEl = document.querySelector('.h3-dice-score');
 
 let imgDiceEl = document.querySelector('.img-dice');
@@ -22,6 +24,7 @@ let closePopupEl = document.querySelector('.close-btn');
 let diceHistory = [];
 
 var howManyDice = 1;
+let flag=false;//flag = 1 symainei mute sound
 
 
 
@@ -34,7 +37,32 @@ init();
 
 
 
+//----------ixos gia zaria starts here----------------
 
+function playMusic1(){
+
+    var music1 = new Audio('../sound/sound_check.mp3');
+    
+    
+    
+    if (flag){
+        music1.pause();
+        console.log('dice sound OFF');
+    }
+    else{
+        music1.play();
+        console.log('dice sound ON');
+    }
+
+}
+//----------ixos gia zaria ends here----------------
+
+//----------koumpi gia anoigma kleisimo ixou starts here--------
+btnSoundEl.addEventListener('click',function(){
+    this.classList.toggle('muted');
+    flag=!flag;
+    console.log('sound pressed');})
+//----------koumpi gia anoigma kleisimo ixou ends here--------
 
 
 btn1DiceEl.addEventListener('click', function(){
@@ -76,6 +104,7 @@ btn4DiceEl.addEventListener('click', function(){
 
 btnRollDiceEl.addEventListener('click', function(){
     console.log('btnRollDice Clicked');
+    playMusic1();
     let dice1,dice2,dice3,dice4;
     switch(howManyDice){
         case 1:
@@ -419,6 +448,9 @@ function init(){
     console.log('init() function run successfully');
     h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
     diceHistory = [];
+    flag = false;
+    const soundButton = document.getElementById('soundButton');
+    soundButton.classList.remove('muted'); // Remove the muted class to reset color
     
     if(howManyDice == 1){
         imgDiceEl.src = '../images/dice-1.png';

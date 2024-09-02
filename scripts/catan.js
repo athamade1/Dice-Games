@@ -38,8 +38,8 @@ function playMusic1(){
     }
 
 }
-    
 //----------ixos gia zaria ends here----------------
+
 
 //----------koumpi gia anoigma kleisimo ixou starts here--------
 btnSoundEl.addEventListener('click',function(){

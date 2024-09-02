@@ -168,6 +168,29 @@ h1.heading-intro{
 
 }
 
+/* -------------------SOUND BUTTON STARTS HERE------------------- */
+.play {
+    padding: 10px;
+    margin-right: 25px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    float: right; /* Aligns the button to the right */
+    background-color: white; /* Initial background color */
+    color: black; /* Icon color */
+}
+
+.play .fas {
+    font-size: 20px;
+}
+
+.play.muted {
+    background-color: red; /* Background color when muted (button is active) */
+    color: white; /* Icon color when muted */
+}
+/* -------------------SOUND BUTTON ENDS HERE------------------- */
+
 .container-1-1{
     padding: 20px 0 20px 0;
 
