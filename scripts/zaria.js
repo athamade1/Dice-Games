@@ -3,6 +3,8 @@ let btn2DiceEl = document.querySelector('.btn-2-dice');
 let btn3DiceEl = document.querySelector('.btn-3-dice');
 let btn4DiceEl = document.querySelector('.btn-4-dice');
 
+let btnSoundEl = document.querySelector('.play');
+
 let h3DiceScoreEl = document.querySelector('.h3-dice-score');
 
 let imgDiceEl = document.querySelector('.img-dice');
@@ -22,6 +24,7 @@ let closePopupEl = document.querySelector('.close-btn');
 let diceHistory = [];
 
 var howManyDice = 1;
+let flag=false;//flag = 1 symainei mute sound
 
 
 
@@ -34,7 +37,32 @@ init();
 
 
 
+//----------ixos gia zaria starts here----------------
 
+function playMusic1(){
+
+    var music1 = new Audio('../sound/sound_check.mp3');
+    
+    
+    
+    if (flag){
+        music1.pause();
+        console.log('dice sound OFF');
+    }
+    else{
+        music1.play();
+        console.log('dice sound ON');
+    }
+
+}
+//----------ixos gia zaria ends here----------------
+
+//----------koumpi gia anoigma kleisimo ixou starts here--------
+btnSoundEl.addEventListener('click',function(){
+    this.classList.toggle('muted');
+    flag=!flag;
+    console.log('sound pressed');})
+//----------koumpi gia anoigma kleisimo ixou ends here--------
 
 
 btn1DiceEl.addEventListener('click', function(){
@@ -76,6 +104,7 @@ btn4DiceEl.addEventListener('click', function(){
 
 btnRollDiceEl.addEventListener('click', function(){
     console.log('btnRollDice Clicked');
+    playMusic1();
     let dice1,dice2,dice3,dice4;
     switch(howManyDice){
         case 1:
@@ -140,7 +169,7 @@ btnHistoryEl.addEventListener('click', function(){
             diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
                 let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
                 //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-                listItem.innerHTML = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>`;
+                listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>`;
                 historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
             });
             break;
@@ -148,7 +177,7 @@ btnHistoryEl.addEventListener('click', function(){
             diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
                 let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
                 //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-                listItem.innerHTML = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span> \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: <span style="color: blue;">${entry.sum}</span>`;
+                listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
                 historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
             });
             break;
@@ -156,7 +185,7 @@ btnHistoryEl.addEventListener('click', function(){
             diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
                 let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
                 //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-                listItem.innerHTML = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span> \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: <span style="color: blue;">${entry.sum}</span>`;
+                listItem.innerHTML = `Roll ${index + 1}:\u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
                 historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
             });
             break;
@@ -164,7 +193,7 @@ btnHistoryEl.addEventListener('click', function(){
             diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
                 let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
                 //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-                listItem.innerHTML = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0\u00A0\u00A0<span style="color: blue;">${entry.dice4}</span> \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: <span style="color: blue;">${entry.sum}</span>`;
+                listItem.innerHTML = `Roll ${index + 1}:\u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice4}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
                 historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
             });
             break;
@@ -419,6 +448,9 @@ function init(){
     console.log('init() function run successfully');
     h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
     diceHistory = [];
+    flag = false;
+    const soundButton = document.getElementById('soundButton');
+    soundButton.classList.remove('muted'); // Remove the muted class to reset color
     
     if(howManyDice == 1){
         imgDiceEl.src = '../images/dice-1.png';

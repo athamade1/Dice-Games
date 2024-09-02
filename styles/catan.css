@@ -209,6 +209,8 @@ h1.heading-intro{
     
 }
 
+
+/* -------------------SOUND BUTTON STARTS HERE------------------- */
 .play {
     padding: 10px;
     margin-right: 25px;
@@ -229,6 +231,7 @@ h1.heading-intro{
     background-color: red; /* Background color when muted (button is active) */
     color: white; /* Icon color when muted */
 }
+/* -------------------SOUND BUTTON ENDS HERE------------------- */
 
 .btn-clear{
     padding: 10px 10px 10px 10px;
@@ -364,3 +367,141 @@ footer {
   .footer-section.games ul li a:hover {
     text-decoration: underline;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*----------------Responsive for phones code starts here-----------*/
+
+@media only screen and (max-width: 768px) {
+
+    .main-container {
+        padding: 20px 0 50px 0;
+        background-size:cover;
+    }
+
+    header {
+        padding: 30px 0;
+    }
+
+    .header-container {
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .logo-container {
+        width: 25%;
+    }
+
+    .nav-container {
+        flex-grow: 1;
+        padding-left: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        position: relative;
+        width: 100%; 
+    }
+
+    .container {
+        padding: 20px 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .container-1-1,
+    .container-1-2 {
+        flex-direction: normal;
+        gap: 10px;
+    }
+
+    .img-dice-1, .img-dice-2, .img-dice-3 {
+        width: 20%;
+    }
+
+    .h3-dice-score, .h3-dice-score-pirates {
+        font-size: 20px;
+    }
+
+    .btn-roll-dice, .btn-clear, .btn-history {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        width: 100px;
+        margin: 0 auto 10px auto;
+    }
+
+    nav ul li ul.submenu {
+        position: static;
+        background-color: transparent;
+        display: none;
+        width: 80%;
+        box-shadow: none;
+        margin-top: 10px;
+        z-index: 1000;
+    }
+
+    nav ul li:hover ul.submenu {
+        display: block;
+    }
+
+    nav ul li ul.submenu li {
+        width: 100%;
+    }
+
+    nav ul li ul.submenu li a {
+        align-items: center;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    nav ul li ul.submenu li a:hover{
+        background-color: #1E90FF;
+    }
+
+    .popup{
+        width: 75%;
+    }
+   
+}
+
+/*----------------Responsive for phones code ends here-----------*/

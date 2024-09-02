@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ένα Ζάρι Dice Games | Dice Games</title>
+    <title>Εικονικά Ζάρια για Επιτραπέζια Παιχνίδια | Dice Games</title>
     <!--FAVICON STARTS HERE-->
     <link rel="icon" href="../images/logo.pirate.jpeg" type="image/png">
     <!--FAVICON ENDS HERE-->
     <link rel="stylesheet" href="../styles/zaria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -48,9 +49,18 @@
     </header>
     <!-- Header menu ends here -->
 
-    <div class="main-container">
 
+
+    <div class="main-container">
         <div class="container">
+
+            <!--Button for sound ON and OFF starts HERE-->
+            <button class="play" id="soundButton">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <!--Button for sound ON and OFF ends HERE-->
+
+            <br>
             <h3 class="h3-arithmos-zarion">Αριθμός Ζαριών</h3>
             <div class="container-buttons">
                 <button class="btn-1-dice">1</button>
@@ -77,7 +87,7 @@
                 <!-- HISTORY POP UP MENU STARTS HERE -->
                 <div class="popup-overlay"></div>
                 <div class="popup">
-                <button class="close-btn">X</button>
+                    <button class="close-btn">X</button>
                 <ul class="history-list"></ul>
                 </div>
                 <!-- HISTORY POP UP MENU ENDS HERE -->
