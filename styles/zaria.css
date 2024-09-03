@@ -437,11 +437,18 @@ h1.heading-intro{
         font-size: 30px;
     }
 
+    .container-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+        justify-items: center; 
+    }
+
     .img-dice,
     .img-dice2,
     .img-dice3,
     .img-dice4 {
-        width: 40%;
+        width: 80%;
     }
 
     .container-1-1-1,
