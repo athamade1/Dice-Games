@@ -473,12 +473,14 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 10px;
     }
 
     .footer-section {
         margin-bottom: 20px;
         text-align: center;
         width: 100%;
+        margin: 0 auto;
     }
 
     .footer-logo {
@@ -488,6 +490,8 @@ footer {
 
     .footer-section.links, .footer-section.games, .footer-section.contact {
         width: 100%;
+        text-align: center; 
+        margin: 0 auto;
     }
 
     nav ul li ul.submenu {
