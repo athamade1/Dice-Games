@@ -120,43 +120,7 @@ btnSoundEl.addEventListener('click',function(){
 //----------koumpi gia anoigma kleisimo ixou ends here--------
 
 
-// btn1DiceEl.addEventListener('click', function(){
-//     howManyDice=1;
-//     btn1DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
 
-// btn2DiceEl.addEventListener('click', function(){
-//     howManyDice=2;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
-// btn3DiceEl.addEventListener('click', function(){
-//     howManyDice=3;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
-// btn4DiceEl.addEventListener('click', function(){
-//     howManyDice=4;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
 
 btnRollDiceEl.addEventListener('click', function(){
     console.log('btnRollDice Clicked');
