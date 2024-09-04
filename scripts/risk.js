@@ -459,7 +459,77 @@ function rollTheDice(dice1,dice2,dice3,dice4,dice5){
 
     }
             
+    console.log(`zaria pou irthane: ${dice1} ,${dice2}, ${dice3}, ${dice4}, ${dice5}`)
+    battle(dice1, dice2, dice3, dice4, dice5);
+
+}
+
+function battle(dice1, dice2, dice3, dice4, dice5){
+    console.log(`function battle() run successfully`);
+    let max1Player1; //to prwto megalitero zari tis epithesis
+    let max2Player1; //to deytero megalitero zari tis epithesis
+
+    let max1Player2; //to prwto megalitero zari tis aminas
+    let max2Player2; //to deytero megalitero zari tis aminas
+
+    if(dice1>=dice2 && dice1>=dice3){
+        max1Player1 = dice1;
+        if(dice2>=dice3){
+            max2Player1 = dice2;
+        } else {
+            max2Player1 = dice3;
+        }
+    } else if (dice2>=dice1 && dice2>=dice3){
+        max1Player1 = dice2;
+        if(dice1>=dice3){
+            max2Player1 = dice1;
+        } else {
+            max2Player1 = dice3;
+        }
+    } else {
+        max1Player1 = dice3;
+        if(dice1>=dice2){
+            max2Player1 = dice1;
+        } else {
+            max2Player1 = dice2;
+        }
+    }
+    console.log(`ta megalytera zaria epithesis einai ${max1Player1} kai ${max2Player1}`);
+        
+
+    if(dice4>=dice5){
+        max1Player2 = dice4;
+        max2Player2 = dice5;
+       
+    } else{
+        max1Player2 = dice5;
+        max2Player2 = dice4;
+    }
+    console.log(`ta megalytera zaria aminas einai ${max1Player2} kai ${max2Player2}`);
     
+    compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2);
+}
+
+function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2){
+    if (max1Player1 >= max1Player2){
+        inputValue2 = inputValue2 - 1;
+        
+        h3DefenseArmyScoreEl.textContent = inputValue2;
+    } else {
+        inputValue1 = inputValue1 - 1;
+        h3AttackArmyScoreEl.textContent = inputValue1
+       
+    }
+
+    if (max2Player1 >= max2Player2){
+        inputValue2 = inputValue2 - 1;
+        
+        h3DefenseArmyScoreEl.textContent = inputValue2;
+    } else {
+        inputValue1 = inputValue1 - 1;
+        h3AttackArmyScoreEl.textContent = inputValue1
+        
+    }
 }
 
 function init(){
