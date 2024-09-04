@@ -4,6 +4,10 @@
 
 body{
     margin: 0;
+    background-image: url('../images/wallpapers/risk-wallpaper.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* padding:20px 0 100px 0;
     background-image: url('../images/wallpapers/onedice.webp');
     background-position: center center;
@@ -13,11 +17,8 @@ body{
 
 .main-container{
     padding:100px 0 100px 0;
-    background-image: url('../images/wallpapers/onedice.webp');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
+    background-color: rgba(72, 35, 0, 0.562);
 }
 
 /* ------------------------- header starts here-------------------------*/
@@ -155,6 +156,7 @@ h1.heading-intro{
 }
 
 .container{
+    z-index: 2000;
     margin: 0 auto;
     background-color: #ffffff9d; /* White with 50% transparency */
     padding: 50px 0 50px 0;
