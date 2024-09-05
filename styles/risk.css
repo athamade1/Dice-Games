@@ -201,6 +201,43 @@ h1.heading-intro{
     gap: 20px;
 
 }
+
+
+/*poso strato exei o kathenas starts here*/
+.container-army-load{
+    padding: 20px 0 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btnok:hover{
+    background-color: blueviolet;
+    
+}
+.numb1,.numb2{
+
+    position:relative;
+    top: 30px;
+    right: 175px;
+    
+}
+.btnok{
+
+    position:relative;
+    top: 15px;
+    right: 150px;
+
+}
+.vsop{
+    position:relative;
+    top: 15px;
+    right: 90px;
+}
+/*poso strato exei o kathenas ends here*/
+
 .container-1-1-1{
     
     display: flex;

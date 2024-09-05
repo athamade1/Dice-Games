@@ -1,5 +1,13 @@
 let btnSoundEl = document.querySelector('.play');
 
+//Poso strato exei o kathenas starts here
+let buttonok=document.querySelector('.btnok');
+var input1 = document.getElementById("myInput1");
+var input2 = document.getElementById("myInput2");
+var inputValue1 = input1.value;
+var inputValue2 = input2.value;
+//Poso strato exei o kathenas ends here
+
 let h3AttackArmyScoreEl = document.querySelector('.h3-attack-army-score');
 let h3DefenseArmyScoreEl = document.querySelector('.h3-defense-army-score');
 
@@ -23,6 +31,8 @@ let diceHistory = [];
 var howManyDice = 5;
 let flag=false;//flag = 1 symainei mute sound
 
+let flagArmy=false; //simainei den dilwses strato ara de paizoun zaria
+
 
 
 
@@ -31,8 +41,56 @@ init();
 
 
 
+//dilonoume poso strato exei o kathenas kai pairnoyme to value starts here
+buttonok.addEventListener('click',function(){
+    init();
+    
+    console.log(`flagArmy = ${flagArmy}`);
+    input1 = document.getElementById("myInput1");
+    inputValue1 = input1.value;
+    console.log('input1', inputValue1);
+
+    input2 = document.getElementById("myInput2");
+    inputValue2 = input2.value;
+    console.log('input2', inputValue2);
+
+    if (inputValue1 != 0 && inputValue2 != 0){
+        flagArmy=true;
+        btnRollDiceEl.style.opacity = '1';
 
 
+        if (inputValue1 >= 3){
+            imgDiceEl.style.opacity = '1';
+            imgDice2El.style.opacity = '1';
+            imgDice3El.style.opacity = '1';
+        } else if (inputValue1 == 2) {
+            imgDiceEl.style.opacity = '1';
+            imgDice2El.style.opacity = '1';
+        } else if ( inputValue1 == 1){
+            imgDiceEl.style.opacity = '1';
+        } else if ( inputValue1 == 0 ){
+            flagArmy = false;
+            console.log("ERROR ARMY 1 CANNOT BE ZERO");
+        }
+    
+    
+        if (inputValue2 >= 2){
+            imgDice4El.style.opacity = '1';
+            imgDice5El.style.opacity = '1';
+        } else if (inputValue2 == 1){
+            imgDice4El.style.opacity = '1';
+        } else if (inputValue2 == 0){
+            flagArmy = false;
+            console.log("ERROR ARMY 2 CANNOT BE ZERO");
+        }
+
+        h3AttackArmyScoreEl.textContent = inputValue1;
+        h3DefenseArmyScoreEl.textContent = inputValue2;
+    }
+
+
+})
+//dilonoume poso strato exei o kathenas kai pairnoyme to value ends here
 
 //----------ixos gia zaria starts here----------------
 
@@ -102,16 +160,21 @@ btnSoundEl.addEventListener('click',function(){
 
 btnRollDiceEl.addEventListener('click', function(){
     console.log('btnRollDice Clicked');
-    playMusic1();
+    
     let dice1,dice2,dice3,dice4,dice5;
 
-    dice1 = Math.trunc(Math.random() * 6) + 1;
-    dice2 = Math.trunc(Math.random() * 6) + 1;
-    dice3 = Math.trunc(Math.random() * 6) + 1;
-    dice4 = Math.trunc(Math.random() * 6) + 1;
-    dice5 = Math.trunc(Math.random() * 6) + 1;
+    if (flagArmy){
+        playMusic1();
+        dice1 = Math.trunc(Math.random() * 6) + 1;
+        dice2 = Math.trunc(Math.random() * 6) + 1;
+        dice3 = Math.trunc(Math.random() * 6) + 1;
+        dice4 = Math.trunc(Math.random() * 6) + 1;
+        dice5 = Math.trunc(Math.random() * 6) + 1;
 
     rollTheDice(dice1,dice2,dice3,dice4,dice5);
+    } else {
+        console.log('ERROR! Δηλωσε τη δυναμη του στρατου σου')
+    }
     
 });
 
@@ -174,6 +237,8 @@ btnClearEl.addEventListener('click', function(){
     popupOverlayEl.style.display = 'none';
     historyPopupEl.style.display = 'none';
     historyListEl.innerHTML = '';
+    
+
     init();
 });
 
@@ -285,6 +350,14 @@ function rollTheDice(dice1,dice2,dice3,dice4,dice5){
 function init(){
     console.log('init() function run successfully');
     // h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
+
+    imgDiceEl.style.opacity = '0.2';
+    imgDice2El.style.opacity = '0.2';
+    imgDice3El.style.opacity = '0.2';
+    imgDice4El.style.opacity = '0.2';
+    imgDice5El.style.opacity = '0.2';
+
+    btnRollDiceEl.style.opacity = '0.2';
 
     imgDiceEl.src = "../images/dice-red-1.png";
     imgDice2El.src = "../images/dice-red-1.png";
