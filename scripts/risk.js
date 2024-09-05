@@ -120,43 +120,7 @@ btnSoundEl.addEventListener('click',function(){
 //----------koumpi gia anoigma kleisimo ixou ends here--------
 
 
-// btn1DiceEl.addEventListener('click', function(){
-//     howManyDice=1;
-//     btn1DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
 
-// btn2DiceEl.addEventListener('click', function(){
-//     howManyDice=2;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
-// btn3DiceEl.addEventListener('click', function(){
-//     howManyDice=3;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
-// btn4DiceEl.addEventListener('click', function(){
-//     howManyDice=4;
-//     btn1DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn2DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn3DiceEl.style.backgroundColor = "white"; // Αλλαγή του φόντου σε μπλε
-//     btn4DiceEl.style.backgroundColor = "aqua"; // Αλλαγή του φόντου σε μπλε
-//     console.log(`clicked ${howManyDice} plays`);
-//     init()
-// })
 
 btnRollDiceEl.addEventListener('click', function(){
     console.log('btnRollDice Clicked');
@@ -165,13 +129,30 @@ btnRollDiceEl.addEventListener('click', function(){
 
     if (flagArmy){
         playMusic1();
-        dice1 = Math.trunc(Math.random() * 6) + 1;
-        dice2 = Math.trunc(Math.random() * 6) + 1;
-        dice3 = Math.trunc(Math.random() * 6) + 1;
-        dice4 = Math.trunc(Math.random() * 6) + 1;
-        dice5 = Math.trunc(Math.random() * 6) + 1;
+        if (inputValue1 >= 3){
+            dice1 = Math.trunc(Math.random() * 6) + 1;
+            dice2 = Math.trunc(Math.random() * 6) + 1;
+            dice3 = Math.trunc(Math.random() * 6) + 1;
+        } else if (inputValue1 == 2){
+            dice1 = Math.trunc(Math.random() * 6) + 1;
+            dice2 = Math.trunc(Math.random() * 6) + 1;
+            dice3 = 0;
+        } else if (inputValue1 == 1){
+            dice1 = Math.trunc(Math.random() * 6) + 1;
+            dice2 = 0;
+            dice3 = 0;
+        }
+        
+        if (inputValue2 >= 2){
+            dice4 = Math.trunc(Math.random() * 6) + 1;
+            dice5 = Math.trunc(Math.random() * 6) + 1;
+        } else if (inputValue2 == 1) {
+            dice4 = Math.trunc(Math.random() * 6) + 1;
+            dice5 = 0;
+        }
+        
 
-    rollTheDice(dice1,dice2,dice3,dice4,dice5);
+        rollTheDice(dice1,dice2,dice3,dice4,dice5);
     } else {
         console.log('ERROR! Δηλωσε τη δυναμη του στρατου σου')
     }
@@ -231,6 +212,8 @@ popupOverlayEl.addEventListener('click', function() {
 });
 
 btnClearEl.addEventListener('click', function(){
+    input1.value=0;
+    input2.value=0;
     console.log('btn clear clicked')
     howManyDice=5;
     diceHistory = [];
@@ -245,105 +228,273 @@ btnClearEl.addEventListener('click', function(){
 
 function rollTheDice(dice1,dice2,dice3,dice4,dice5){
     console.log('rollthedice function run successfully')
+    console.log(`inputValue1: ${inputValue1}  inputValue2: ${inputValue2}`)
 
-    switch (dice1){
-        case 1:
-            imgDiceEl.src = '../images/dice-red-1.png';
-            break;
-        case 2:
-            imgDiceEl.src = '../images/dice-red-2.png';
-            break;
-        case 3:
-            imgDiceEl.src = '../images/dice-red-3.png';
-            break;
-        case 4:
-            imgDiceEl.src = '../images/dice-red-4.png';
-            break;
-        case 5:
-            imgDiceEl.src = '../images/dice-red-5.png';
-            break;
-        case 6:
-            imgDiceEl.src = '../images/dice-red-6.png';
-            break;
+    if (inputValue1 >= 3){
+        switch (dice1){
+            case 1:
+                imgDiceEl.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDiceEl.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDiceEl.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDiceEl.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDiceEl.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDiceEl.src = '../images/dice-red-6.png';
+                break;
+        }
+        switch (dice2){
+            case 1:
+                imgDice2El.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDice2El.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDice2El.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDice2El.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDice2El.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDice2El.src = '../images/dice-red-6.png';
+                break;
+        }
+        switch (dice3){
+            case 1:
+                imgDice3El.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDice3El.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDice3El.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDice3El.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDice3El.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDice3El.src = '../images/dice-red-6.png';
+                break;
+        }
+
+
+    }else if (inputValue1 == 2) {
+        switch (dice1){
+            case 1:
+                imgDiceEl.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDiceEl.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDiceEl.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDiceEl.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDiceEl.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDiceEl.src = '../images/dice-red-6.png';
+                break;
+        }
+        switch (dice2){
+            case 1:
+                imgDice2El.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDice2El.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDice2El.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDice2El.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDice2El.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDice2El.src = '../images/dice-red-6.png';
+                break;
+        }
+
+    } else if (inputValue1 == 1){
+        switch (dice1){
+            case 1:
+                imgDiceEl.src = '../images/dice-red-1.png';
+                break;
+            case 2:
+                imgDiceEl.src = '../images/dice-red-2.png';
+                break;
+            case 3:
+                imgDiceEl.src = '../images/dice-red-3.png';
+                break;
+            case 4:
+                imgDiceEl.src = '../images/dice-red-4.png';
+                break;
+            case 5:
+                imgDiceEl.src = '../images/dice-red-5.png';
+                break;
+            case 6:
+                imgDiceEl.src = '../images/dice-red-6.png';
+                break;
+        }
+
     }
-    switch (dice2){
-        case 1:
-            imgDice2El.src = '../images/dice-red-1.png';
-            break;
-        case 2:
-            imgDice2El.src = '../images/dice-red-2.png';
-            break;
-        case 3:
-            imgDice2El.src = '../images/dice-red-3.png';
-            break;
-        case 4:
-            imgDice2El.src = '../images/dice-red-4.png';
-            break;
-        case 5:
-            imgDice2El.src = '../images/dice-red-5.png';
-            break;
-        case 6:
-            imgDice2El.src = '../images/dice-red-6.png';
-            break;
+
+    if (inputValue2 >= 2){
+        switch (dice4){
+            case 1:
+                imgDice4El.src = '../images/dice-1.png';
+                break;
+            case 2:
+                imgDice4El.src = '../images/dice-2.png';
+                break;
+            case 3:
+                imgDice4El.src = '../images/dice-3.png';
+                break;
+            case 4:
+                imgDice4El.src = '../images/dice-4.png';
+                break;
+            case 5:
+                imgDice4El.src = '../images/dice-5.png';
+                break;
+            case 6:
+                imgDice4El.src = '../images/dice-6.png';
+                break;
+        }
+        switch (dice5){
+            case 1:
+                imgDice5El.src = '../images/dice-1.png';
+                break;
+            case 2:
+                imgDice5El.src = '../images/dice-2.png';
+                break;
+            case 3:
+                imgDice5El.src = '../images/dice-3.png';
+                break;
+            case 4:
+                imgDice5El.src = '../images/dice-4.png';
+                break;
+            case 5:
+                imgDice5El.src = '../images/dice-5.png';
+                break;
+            case 6:
+                imgDice5El.src = '../images/dice-6.png';
+                break;
+        }
+
+    }else if (inputValue2 == 1){
+        switch (dice4){
+            case 1:
+                imgDice4El.src = '../images/dice-1.png';
+                break;
+            case 2:
+                imgDice4El.src = '../images/dice-2.png';
+                break;
+            case 3:
+                imgDice4El.src = '../images/dice-3.png';
+                break;
+            case 4:
+                imgDice4El.src = '../images/dice-4.png';
+                break;
+            case 5:
+                imgDice4El.src = '../images/dice-5.png';
+                break;
+            case 6:
+                imgDice4El.src = '../images/dice-6.png';
+                break;
+        }
+
     }
-    switch (dice3){
-        case 1:
-            imgDice3El.src = '../images/dice-red-1.png';
-            break;
-        case 2:
-            imgDice3El.src = '../images/dice-red-2.png';
-            break;
-        case 3:
-            imgDice3El.src = '../images/dice-red-3.png';
-            break;
-        case 4:
-            imgDice3El.src = '../images/dice-red-4.png';
-            break;
-        case 5:
-            imgDice3El.src = '../images/dice-red-5.png';
-            break;
-        case 6:
-            imgDice3El.src = '../images/dice-red-6.png';
-            break;
+            
+    console.log(`zaria pou irthane: ${dice1} ,${dice2}, ${dice3}, ${dice4}, ${dice5}`)
+    battle(dice1, dice2, dice3, dice4, dice5);
+
+}
+
+function battle(dice1, dice2, dice3, dice4, dice5){
+    console.log(`function battle() run successfully`);
+    let max1Player1; //to prwto megalitero zari tis epithesis
+    let max2Player1; //to deytero megalitero zari tis epithesis
+
+    let max1Player2; //to prwto megalitero zari tis aminas
+    let max2Player2; //to deytero megalitero zari tis aminas
+
+    if(dice1>=dice2 && dice1>=dice3){
+        max1Player1 = dice1;
+        if(dice2>=dice3){
+            max2Player1 = dice2;
+        } else {
+            max2Player1 = dice3;
+        }
+    } else if (dice2>=dice1 && dice2>=dice3){
+        max1Player1 = dice2;
+        if(dice1>=dice3){
+            max2Player1 = dice1;
+        } else {
+            max2Player1 = dice3;
+        }
+    } else {
+        max1Player1 = dice3;
+        if(dice1>=dice2){
+            max2Player1 = dice1;
+        } else {
+            max2Player1 = dice2;
+        }
     }
-    switch (dice4){
-        case 1:
-            imgDice4El.src = '../images/dice-1.png';
-            break;
-        case 2:
-            imgDice4El.src = '../images/dice-2.png';
-            break;
-        case 3:
-            imgDice4El.src = '../images/dice-3.png';
-            break;
-        case 4:
-            imgDice4El.src = '../images/dice-4.png';
-            break;
-        case 5:
-            imgDice4El.src = '../images/dice-5.png';
-            break;
-        case 6:
-            imgDice4El.src = '../images/dice-6.png';
-            break;
-    } switch (dice5){
-        case 1:
-            imgDice5El.src = '../images/dice-1.png';
-            break;
-        case 2:
-            imgDice5El.src = '../images/dice-2.png';
-            break;
-        case 3:
-            imgDice5El.src = '../images/dice-3.png';
-            break;
-        case 4:
-            imgDice5El.src = '../images/dice-4.png';
-            break;
-        case 5:
-            imgDice5El.src = '../images/dice-5.png';
-            break;
-        case 6:
-            imgDice5El.src = '../images/dice-6.png';
-            break;
+    console.log(`ta megalytera zaria epithesis einai ${max1Player1} kai ${max2Player1}`);
+        
+
+    if(dice4>=dice5){
+        max1Player2 = dice4;
+        max2Player2 = dice5;
+       
+    } else{
+        max1Player2 = dice5;
+        max2Player2 = dice4;
+    }
+    console.log(`ta megalytera zaria aminas einai ${max1Player2} kai ${max2Player2}`);
+    
+    compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2);
+}
+
+function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2){
+    if (max1Player1 >= max1Player2){
+        inputValue2 = inputValue2 - 1;
+        
+        h3DefenseArmyScoreEl.textContent = inputValue2;
+    } else {
+        inputValue1 = inputValue1 - 1;
+        h3AttackArmyScoreEl.textContent = inputValue1
+       
+    }
+
+    if (max2Player1 >= max2Player2){
+        inputValue2 = inputValue2 - 1;
+        
+        h3DefenseArmyScoreEl.textContent = inputValue2;
+    } else {
+        inputValue1 = inputValue1 - 1;
+        h3AttackArmyScoreEl.textContent = inputValue1
+        
     }
 }
 
