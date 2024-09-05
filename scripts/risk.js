@@ -214,6 +214,8 @@ popupOverlayEl.addEventListener('click', function() {
 btnClearEl.addEventListener('click', function(){
     input1.value=0;
     input2.value=0;
+    h3AttackArmyScoreEl.textContent = 0;
+    h3DefenseArmyScoreEl=0;
     console.log('btn clear clicked')
     howManyDice=5;
     diceHistory = [];
@@ -232,6 +234,7 @@ function rollTheDice(dice1,dice2,dice3,dice4,dice5){
 
     if (inputValue1 >= 3){
         switch (dice1){
+            
             case 1:
                 imgDiceEl.src = '../images/dice-red-1.png';
                 break;
@@ -252,6 +255,7 @@ function rollTheDice(dice1,dice2,dice3,dice4,dice5){
                 break;
         }
         switch (dice2){
+            
             case 1:
                 imgDice2El.src = '../images/dice-red-1.png';
                 break;
@@ -272,6 +276,7 @@ function rollTheDice(dice1,dice2,dice3,dice4,dice5){
                 break;
         }
         switch (dice3){
+            
             case 1:
                 imgDice3El.src = '../images/dice-red-1.png';
                 break;
@@ -495,6 +500,28 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
         inputValue1 = inputValue1 - 1;
         h3AttackArmyScoreEl.textContent = inputValue1
         
+    }
+    if(inputValue1<=0 || inputValue2<=0){
+       // btnRollDiceEl.style.opacity = '0.2';
+        //console.log('telos');
+        imgDiceEl.style.opacity = '0.2';
+        imgDice2El.style.opacity = '0.2';
+        imgDice3El.style.opacity = '0.2';
+        imgDice4El.style.opacity = '0.2';
+        imgDice5El.style.opacity = '0.2';
+    
+        btnRollDiceEl.style.opacity = '0.2';
+        flagArmy = false;
+        
+        if(inputValue1<=0){
+            h3AttackArmyScoreEl.textContent = 0;
+
+        }
+        else if(inputValue2<=0){
+            h3DefenseArmyScoreEl.textContent = 0;
+
+
+        }
     }
 }
 

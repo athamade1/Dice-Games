@@ -219,24 +219,30 @@ h1.heading-intro{
     background-color: blueviolet;
     
 }
+.number1{
+    position:relative;
+    
+    left: 130px;
+
+}
 .numb1,.numb2{
 
     position:relative;
     top: 30px;
-    right: 175px;
+    right: 70px;
     
 }
 .btnok{
 
     position:relative;
     top: 15px;
-    right: 150px;
+    right: 70px;
 
 }
 .vsop{
     position:relative;
     top: 15px;
-    right: 90px;
+    left: 35px;
 }
 /*poso strato exei o kathenas ends here*/
 
