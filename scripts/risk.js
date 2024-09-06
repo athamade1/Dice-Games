@@ -161,44 +161,20 @@ btnRollDiceEl.addEventListener('click', function(){
 
 btnHistoryEl.addEventListener('click', function(){
     console.log('btnHistory Clicked');
-    // popupOverlayEl.style.display = 'block';
-    // historyPopupEl.style.display = 'block';
-    // historyListEl.innerHTML = ''; // Καθαρισμός της λίστας πριν την ενημέρωση
-    // switch (howManyDice){
-    //     case 1:
-    //         diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
-    //             let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
-    //             //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-    //             listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>`;
-    //             historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
-    //         });
-    //         break;
-    //     case 2:
-    //         diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
-    //             let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
-    //             //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-    //             listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
-    //             historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
-    //         });
-    //         break;
-    //     case 3:
-    //         diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
-    //             let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
-    //             //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-    //             listItem.innerHTML = `Roll ${index + 1}:\u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
-    //             historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
-    //         });
-    //         break;
-    //     case 4:
-    //         diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
-    //             let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
-    //             //listItem.textContent = `Roll ${index + 1}: \u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0\u00A0\u00A0${entry.dice2} \u00A0\u00A0\u00A0\u00A0 \u00A0\u00A0\u00A0\u00A0 Sum: ${entry.sum}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-    //             listItem.innerHTML = `Roll ${index + 1}:\u00A0\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice4}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.sum}</span>`;
-    //             historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
-    //         });
-    //         break;
-    // }
+    popupOverlayEl.style.display = 'block';
+    historyPopupEl.style.display = 'block';
+    historyListEl.innerHTML = ''; // Καθαρισμός της λίστας πριν την ενημέρωση
+
+    diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
+        let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
+        // listItem.textContent = `Roll ${index + 1}: Dice 1 = ${entry.dice1}, Dice 2 = ${entry.dice2}, Dice 3 ${entry.dice3}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
+        listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span> \u00A0<span style="color: blue;">${entry.dice3}</span>`;
+        historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
     
+   // console.log(pirate);
+    
+    });
+           
 });
 
 closePopupEl.addEventListener('click', function() {
@@ -215,7 +191,7 @@ btnClearEl.addEventListener('click', function(){
     input1.value=0;
     input2.value=0;
     h3AttackArmyScoreEl.textContent = 0;
-    h3DefenseArmyScoreEl=0;
+    h3DefenseArmyScoreEl.textContent = 0;
     console.log('btn clear clicked')
     howManyDice=5;
     diceHistory = [];
@@ -445,24 +421,40 @@ function battle(dice1, dice2, dice3, dice4, dice5){
 
     if(dice1>=dice2 && dice1>=dice3){
         max1Player1 = dice1;
+        imgDiceEl.style.width = '20%';
+        imgDice2El.style.width = '15%';
+        imgDice3El.style.width = '15%';
+
         if(dice2>=dice3){
             max2Player1 = dice2;
+            imgDice2El.style.width = '17%';
         } else {
             max2Player1 = dice3;
+            imgDice3El.style.width = '17%';
         }
     } else if (dice2>=dice1 && dice2>=dice3){
         max1Player1 = dice2;
+        imgDice2El.style.width = '20%';
+        imgDiceEl.style.width = '15%';
+        imgDice3El.style.width = '15%';
         if(dice1>=dice3){
             max2Player1 = dice1;
+            imgDiceEl.style.width = '17%';
         } else {
             max2Player1 = dice3;
+            imgDice3El.style.width = '17%';
         }
     } else {
         max1Player1 = dice3;
+        imgDice2El.style.width = '15%';
+        imgDiceEl.style.width = '15%';
+        imgDice3El.style.width = '20%';
         if(dice1>=dice2){
             max2Player1 = dice1;
+            imgDiceEl.style.width = '17%';
         } else {
             max2Player1 = dice2;
+            imgDice2El.style.width = '17%';
         }
     }
     console.log(`ta megalytera zaria epithesis einai ${max1Player1} kai ${max2Player1}`);
@@ -521,13 +513,25 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             h3DefenseArmyScoreEl.textContent = 0;
 
 
+        } 
+    } else if(inputValue1==2){
+        imgDice3El.style.opacity = '0.2';
         }
-    }
+        else if(inputValue1==1){
+            imgDice2El.style.opacity = '0.2';
+            imgDice3El.style.opacity = '0.2';
+        } else if(inputValue2==1){
+            imgDice5El.style.opacity = '0.2';
+            
+            }
 }
 
 function init(){
     console.log('init() function run successfully');
     // h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
+    imgDice2El.style.width = '15%';
+    imgDiceEl.style.width = '15%';
+    imgDice3El.style.width = '15%';
 
     imgDiceEl.style.opacity = '0.2';
     imgDice2El.style.opacity = '0.2';
@@ -545,9 +549,9 @@ function init(){
 
     diceHistory = [];
     
-    flag = false;
+    // flag = false;
     const soundButton = document.getElementById('soundButton');
-    soundButton.classList.remove('muted'); // Remove the muted class to reset color
+    // soundButton.classList.remove('muted'); 
     
     
 }
