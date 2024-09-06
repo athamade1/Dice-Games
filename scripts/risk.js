@@ -530,6 +530,7 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
 function init(){
     console.log('init() function run successfully');
     // h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
+
     imgDice2El.style.width = '15%';
     imgDiceEl.style.width = '15%';
     imgDice3El.style.width = '15%';
@@ -549,6 +550,27 @@ function init(){
     imgDice5El.src = "../images/dice-1.png";
 
     diceHistory = [];
+
+    /*ο κώδικας για το burger menu αρχίζει εδώ*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const navContainer = document.querySelector('.nav-container');
+
+    burger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        navContainer.classList.toggle('active'); 
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!navContainer.contains(e.target) && !burger.contains(e.target)) {
+            navContainer.classList.remove('active');
+        }
+    });
+});
+
+/*ο κώδικας για το burger menu τελειώνει εδώ*/
+
     
     // flag = false;
     const soundButton = document.getElementById('soundButton');
