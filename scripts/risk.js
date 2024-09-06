@@ -461,24 +461,40 @@ function battle(dice1, dice2, dice3, dice4, dice5){
 
     if(dice1>=dice2 && dice1>=dice3){
         max1Player1 = dice1;
+        imgDiceEl.style.width = '20%';
+        imgDice2El.style.width = '15%';
+        imgDice3El.style.width = '15%';
+
         if(dice2>=dice3){
             max2Player1 = dice2;
+            imgDice2El.style.width = '17%';
         } else {
             max2Player1 = dice3;
+            imgDice3El.style.width = '17%';
         }
     } else if (dice2>=dice1 && dice2>=dice3){
         max1Player1 = dice2;
+        imgDice2El.style.width = '20%';
+        imgDiceEl.style.width = '15%';
+        imgDice3El.style.width = '15%';
         if(dice1>=dice3){
             max2Player1 = dice1;
+            imgDiceEl.style.width = '17%';
         } else {
             max2Player1 = dice3;
+            imgDice3El.style.width = '17%';
         }
     } else {
         max1Player1 = dice3;
+        imgDice2El.style.width = '15%';
+        imgDiceEl.style.width = '15%';
+        imgDice3El.style.width = '20%';
         if(dice1>=dice2){
             max2Player1 = dice1;
+            imgDiceEl.style.width = '17%';
         } else {
             max2Player1 = dice2;
+            imgDice2El.style.width = '17%';
         }
     }
     console.log(`ta megalytera zaria epithesis einai ${max1Player1} kai ${max2Player1}`);
@@ -537,7 +553,11 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             h3DefenseArmyScoreEl.textContent = 0;
 
 
+        } 
+    } else if(inputValue1==2){
+        imgDice3El.style.opacity = '0.2';
         }
+<<<<<<< HEAD
         
     }
     else if(inputValue1==2){
@@ -551,11 +571,23 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
         imgDice5El.style.opacity = '0.2';
 
     }
+=======
+        else if(inputValue1==1){
+            imgDice2El.style.opacity = '0.2';
+            imgDice3El.style.opacity = '0.2';
+        } else if(inputValue2==1){
+            imgDice5El.style.opacity = '0.2';
+            
+            }
+>>>>>>> 9727bb6418a7e9dfb394dc818652505bf5cffe95
 }
 
 function init(){
     console.log('init() function run successfully');
     // h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
+    imgDice2El.style.width = '15%';
+    imgDiceEl.style.width = '15%';
+    imgDice3El.style.width = '15%';
 
     imgDiceEl.style.opacity = '0.2';
     imgDice2El.style.opacity = '0.2';
@@ -573,9 +605,9 @@ function init(){
 
     diceHistory = [];
     
-    flag = false;
+    // flag = false;
     const soundButton = document.getElementById('soundButton');
-    soundButton.classList.remove('muted'); // Remove the muted class to reset color
+    // soundButton.classList.remove('muted'); 
     
     
 }
