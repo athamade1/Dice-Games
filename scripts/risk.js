@@ -153,14 +153,15 @@ btnRollDiceEl.addEventListener('click', function(){
         
 
         rollTheDice(dice1,dice2,dice3,dice4,dice5);
+        diceHistory.push({ dice1, dice2,dice3,dice4,dice5 });
     } else {
         console.log('ERROR! Δηλωσε τη δυναμη του στρατου σου')
     }
     
 });
 
-btnHistoryEl.addEventListener('click', function(){
-    console.log('btnHistory Clicked');
+//btnHistoryEl.addEventListener('click', function(){
+//    console.log('btnHistory Clicked');
     // popupOverlayEl.style.display = 'block';
     // historyPopupEl.style.display = 'block';
     // historyListEl.innerHTML = ''; // Καθαρισμός της λίστας πριν την ενημέρωση
@@ -199,8 +200,23 @@ btnHistoryEl.addEventListener('click', function(){
     //         break;
     // }
     
-});
+//});
+btnHistoryEl.addEventListener('click', function(){
+    console.log('btnHistory Clicked');
+    popupOverlayEl.style.display = 'block';
+    historyPopupEl.style.display = 'block';
+    historyListEl.innerHTML = ''; // Καθαρισμός της λίστας πριν την ενημέρωση
 
+    diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
+        let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
+        // listItem.textContent = `Roll ${index + 1}: Dice 1 = ${entry.dice1}, Dice 2 = ${entry.dice2}, Dice 3 ${entry.test}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
+        listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span> \u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.dice4}</span></span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.dice5}</span>`;
+        historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
+    
+   // console.log(pirate);
+    
+    });
+});
 closePopupEl.addEventListener('click', function() {
     popupOverlayEl.style.display = 'none';
     historyPopupEl.style.display = 'none';
@@ -215,7 +231,7 @@ btnClearEl.addEventListener('click', function(){
     input1.value=0;
     input2.value=0;
     h3AttackArmyScoreEl.textContent = 0;
-    h3DefenseArmyScoreEl=0;
+    h3DefenseArmyScoreEl.textContent=0;
     console.log('btn clear clicked')
     howManyDice=5;
     diceHistory = [];
@@ -522,6 +538,18 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
 
 
         }
+        
+    }
+    else if(inputValue1==2){
+        imgDice3El.style.opacity = '0.2';
+    }
+    else if(inputValue1==1){
+        imgDice2El.style.opacity = '0.2';
+        imgDice3El.style.opacity = '0.2';
+    }
+    else if(inputValue2==1){
+        imgDice5El.style.opacity = '0.2';
+
     }
 }
 
