@@ -638,8 +638,12 @@ footer {
         gap: 10px;
     }
 
-    .img-dice, .img-dice2, .img-dice3, .img-dice4, .img-dice5 {
-        width: 30%; 
+    .img-dice, .img-dice2, .img-dice3{
+        width: 30%;
+    }
+
+    .img-dice4, .img-dice5 {
+        width: 15%; 
     }
 
     .btn-1-dice, .btn-2-dice, .btn-3-dice, .btn-4-dice {
