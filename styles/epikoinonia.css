@@ -213,4 +213,136 @@ li {
 
 }
 
+/* footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-section.contact,
+  .footer-section.links,
+  .footer-section.games {
+    text-align: left;
+  }
+  
+  .footer-logo {
+    width: 100px; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-section.links .social-links {
+    margin: 10px 0;
+  }
+  
+  .footer-section.links .social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-section a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .rate-me {
+    display: block;
+    margin-top: 10px;
+    color: #00f;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section.games ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section.games ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section.games ul li a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section.games ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /*footer ends here*/
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/*----------------Responsive for phones code starts here-----------*/
+
+@media (max-width: 768px) {
+
+footer {
+    padding: 10px 0;
+}
+
+.footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    width: 100px;
+    margin: 0 auto 10px auto;
+}
+
+.footer-section.links, .footer-section.games, .footer-section.contact {
+    width: 100%;
+    text-align: center; 
+    margin: 0 auto;
+}
+}
+
+/*----------------Responsive for phones code ends here-----------*/
+
 
