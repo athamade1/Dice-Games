@@ -72,6 +72,7 @@ header::before {
 
 .nav-container{
     padding-left: 50px;
+    z-index: 2000;
 
 }
 
@@ -156,6 +157,7 @@ h1.heading-intro{
 }
 
 .container{
+    position: relative;
     z-index: 2000;
     margin: 0 auto;
     background-color: #ffffff9d; /* White with 50% transparency */
@@ -181,6 +183,7 @@ h1.heading-intro{
     float: right; /* Aligns the button to the right */
     background-color: white; /* Initial background color */
     color: black; /* Icon color */
+    z-index: 1000;
 }
 
 .play .fas {
@@ -595,6 +598,8 @@ footer {
         border-radius: 8px;
         width: 80%;
         text-align: center;
+        z-index: 2000;
+        
     }
 
     .burger {
@@ -616,9 +621,19 @@ footer {
     }
 
     .container {
-        padding: 20px 0;
-        width: 100%;
-        box-shadow: none;
+        margin-top: 20%;
+        display: grid;
+        gap: 10px; 
+        justify-items: center; 
+        z-index: 0;
+    }
+
+    .play {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+               
     }
 
     .container-army-load {
