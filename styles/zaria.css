@@ -642,6 +642,11 @@ footer {
         text-align: center; 
         margin: 0 auto;
     }
+
+    .h3-arithmos-zarion{
+        text-align: center;
+        padding-left: 15%;
+    }
 }
 
 /*----------------Responsive for phones code ends here-----------*/
