@@ -327,6 +327,40 @@ footer {
   .container-policy{
     width: 80%
   }
+
+  .image-for-hero-section{
+    width: 10%;
+    }
+    
+    .container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    }
+    
+    .container-1 div {
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    }
+    
+    .container-1-1,
+    .container-1-2,
+    .container-1-3,
+    .container-1-4,
+    .container-1-5,
+    .container-1-6 {
+    font-size: 24px;
+    }
+
   .h3-policy{
     text-align: center;
     font-size: 25px;
