@@ -555,8 +555,8 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDice4El.style.opacity = '0.2';
             imgDice5El.style.opacity = '0.2';
             h3DefenseArmyScoreEl.style.display = 'unset';
-            h3AttackArmyEl.textContent='Νικητής! Στρατός Επιτιθέμενου:';
-            h3defencearmyEl.textContent='Χαμένος :( Στρατός Αμυνόμενου';
+            h3AttackArmyEl.textContent='Στρατός Επιτιθέμενου:';
+            h3defencearmyEl.textContent='Χαμένος:';
             input1.value=0;
             input2.value=0;
 
