@@ -242,6 +242,8 @@ btnClearEl.addEventListener('click', function(){
     historyListEl.innerHTML = '';
     
 
+    
+
     init();
 });
 
@@ -522,7 +524,7 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
         h3DefenseArmyScoreEl.textContent = inputValue2;
     } else {
         inputValue1 = inputValue1 - 1;
-        h3AttackArmyScoreEl.textContent = inputValue1
+        h3AttackArmyScoreEl.textContent = inputValue1;
        
     }
 
@@ -542,17 +544,21 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDiceEl.style.opacity = '0.2';
             imgDice2El.style.opacity = '0.2';
             imgDice3El.style.opacity = '0.2';
-            h3AttackArmyScoreEl.style.display = 'none';
-            h3DefenseArmyScoreEl.style.display='none';
-            h3AttackArmyEl.textContent='Χαμένος';
+            h3AttackArmyScoreEl.style.display = 'unset';
+            h3defencearmyEl.textContent='Νικητής! Στρατός Αμυνόμενου:';
+            h3AttackArmyEl.textContent='Χαμένος :( Στρατός Επιτιθέμενου:';
+            input1.value=0;
+            input2.value=0;
 
         }
         else if(inputValue2<=0){
             imgDice4El.style.opacity = '0.2';
             imgDice5El.style.opacity = '0.2';
-            h3DefenseArmyScoreEl.style.display = 'none';
-            h3AttackArmyScoreEl.style.display = 'none';
-            h3defencearmyEl.textContent='Χαμένος';
+            h3DefenseArmyScoreEl.style.display = 'unset';
+            h3AttackArmyEl.textContent='Νικητής! Στρατός Επιτιθέμενου:';
+            h3defencearmyEl.textContent='Χαμένος :( Στρατός Αμυνόμενου';
+            input1.value=0;
+            input2.value=0;
 
         }
         
@@ -609,6 +615,12 @@ function init(){
     imgDice3El.src = "../images/dice-red-1.png";
     imgDice4El.src = "../images/dice-1.png";
     imgDice5El.src = "../images/dice-1.png";
+
+    h3defencearmyEl.textContent='Στρατός Αμυνόμενου:'
+    h3AttackArmyEl.textContent='Στρατός Επιτιθέμενου:'
+    
+    
+
 
     diceHistory = [];
 
