@@ -554,12 +554,12 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
 
 
         } 
-    } else if(inputValue1==2){
+    } 
+    else if(inputValue1==2){
         imgDice3El.style.opacity = '0.2';
         }
-<<<<<<< HEAD
         
-    }
+    
     else if(inputValue1==2){
         imgDice3El.style.opacity = '0.2';
     }
@@ -571,15 +571,6 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
         imgDice5El.style.opacity = '0.2';
 
     }
-=======
-        else if(inputValue1==1){
-            imgDice2El.style.opacity = '0.2';
-            imgDice3El.style.opacity = '0.2';
-        } else if(inputValue2==1){
-            imgDice5El.style.opacity = '0.2';
-            
-            }
->>>>>>> 9727bb6418a7e9dfb394dc818652505bf5cffe95
 }
 
 function init(){
