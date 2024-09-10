@@ -40,11 +40,18 @@ function playMusic1(){
 }
 //----------ixos gia zaria ends here----------------
 
+//----------koumpi gia anoigma kleisimo ixou ends here--------
+
 
 //----------koumpi gia anoigma kleisimo ixou starts here--------
+//btnSoundEl.addEventListener('click',function(){
+  //  flag=!flag;
+    //console.log('sound pressed');})
 btnSoundEl.addEventListener('click',function(){
+    this.classList.toggle('muted');
     flag=!flag;
-    console.log('sound pressed');})
+    console.log('sound pressed');
+})
 //----------koumpi gia anoigma kleisimo ixou ends here--------
 
 //----------ixos gia peirates starts here----------------
@@ -248,6 +255,7 @@ function init(){
     imgDice3El.src = "../images/pirate.png";
 
     const soundButton = document.getElementById('soundButton');
+    flag=false;
     soundButton.classList.remove('muted'); // Remove the muted class to reset color
 }
 
