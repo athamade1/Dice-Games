@@ -544,8 +544,8 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDice3El.style.opacity = '0.2';
             h3AttackArmyScoreEl.style.display = 'none';
             h3DefenseArmyScoreEl.style.display='none';
-            h3defencearmyEl.textContent='winner';
-            h3AttackArmyEl.textContent='loser';
+            h3defencearmyEl.textContent='Νικητής';
+            h3AttackArmyEl.textContent='Χαμένος';
 
         }
         else if(inputValue2<=0){
@@ -553,8 +553,8 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDice5El.style.opacity = '0.2';
             h3DefenseArmyScoreEl.style.display = 'none';
             h3AttackArmyScoreEl.style.display = 'none';
-            h3AttackArmyEl.textContent='winner';
-            h3defencearmyEl.textContent='loser';
+            h3AttackArmyEl.textContent='Νικητής';
+            h3defencearmyEl.textContent='Χαμένος';
 
         }
         
