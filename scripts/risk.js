@@ -544,7 +544,6 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDice3El.style.opacity = '0.2';
             h3AttackArmyScoreEl.style.display = 'none';
             h3DefenseArmyScoreEl.style.display='none';
-            h3defencearmyEl.textContent='Νικητής';
             h3AttackArmyEl.textContent='Χαμένος';
 
         }
@@ -553,7 +552,6 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             imgDice5El.style.opacity = '0.2';
             h3DefenseArmyScoreEl.style.display = 'none';
             h3AttackArmyScoreEl.style.display = 'none';
-            h3AttackArmyEl.textContent='Νικητής';
             h3defencearmyEl.textContent='Χαμένος';
 
         }
