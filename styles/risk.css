@@ -72,6 +72,7 @@ header::before {
 
 .nav-container{
     padding-left: 50px;
+    z-index: 2000;
 
 }
 
@@ -156,6 +157,7 @@ h1.heading-intro{
 }
 
 .container{
+    position: relative;
     z-index: 2000;
     margin: 0 auto;
     background-color: #ffffff9d; /* White with 50% transparency */
@@ -181,6 +183,7 @@ h1.heading-intro{
     float: right; /* Aligns the button to the right */
     background-color: white; /* Initial background color */
     color: black; /* Icon color */
+    z-index: 1000;
 }
 
 .play .fas {
@@ -464,13 +467,109 @@ h1.heading-intro{
 
 /* ---------------History and popup menu ends here----------------- */
 
+/* footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-section.contact,
+  .footer-section.links,
+  .footer-section.games {
+    text-align: left;
+  }
+  
+  .footer-logo {
+    width: 100px; 
+    margin-bottom: 10px;
+  }
+  
+  .footer-section.links .social-links {
+    margin: 10px 0;
+  }
+  
+  .footer-section.links .social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .footer-section a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .rate-me {
+    display: block;
+    margin-top: 10px;
+    color: #00f;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-section.games ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section.games ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section.games ul li a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .footer-section.games ul li a:hover {
+    text-decoration: underline;
+  }
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
 /*----------------Responsive for phones code starts here-----------*/
 
 
 @media (max-width: 768px) {
-    body {
-        padding: 0;
+    .main-container {
+        padding: 20px 0 50px 0;
+        background-size:cover;
     }
+
     header {
         padding: 30px 0;
     }
@@ -486,53 +585,119 @@ h1.heading-intro{
     }
 
     .logo-container {
-        width: 30%;
+        width: 25%;
     }
 
     .nav-container {
-        flex-grow: 1;
-        padding-left: 50px;
+        display: none; 
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        text-align: center;
+        z-index: 2000;
+        
+    }
+
+    .burger {
+        display: flex; 
+    }
+
+    .nav-container.active {
+        display: block; 
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        width: 100%;
     }
 
     nav ul li {
-        position: relative;
+        margin: 10px 0;
+    }
+
+    .container {
+        margin-top: 20%;
+        display: grid;
+        gap: 10px; 
+        justify-items: center; 
+        z-index: 0;
+    }
+
+    .play {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1000;
+               
+    }
+
+    .container-army-load {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .number1, .numb1, .numb2, .btnok, .vsop {
+        position: static; 
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .container-buttons {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .img-dice, .img-dice2, .img-dice3{
+        width: 30%;
+    }
+
+    .img-dice4, .img-dice5 {
+        width: 15%; 
+    }
+
+    .btn-1-dice, .btn-2-dice, .btn-3-dice, .btn-4-dice {
         width: 100%; 
+        padding: 15px 0; 
     }
 
-    h1.heading-intro {
-        font-size: 30px;
+    .btn-roll-dice, .btn-clear, .btn-history {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
-    .img-dice,
-    .img-dice2,
-    .img-dice3,
-    .img-dice4 {
-        width: 40%;
+    footer {
+        padding: 10px 0;
     }
 
-    .container-1-1-1,
-    .container-1-1-2 {
+    .footer-container {
         flex-direction: column;
         align-items: center;
-    }
-    .container-buttons {
-        align-items: normal;
+        text-align: center;
+        padding: 0 10px;
     }
 
-    .btn-1-dice,
-    .btn-2-dice,
-    .btn-3-dice,
-    .btn-4-dice,
-    .btn-roll-dice,
-    .btn-clear,
-    .btn-history {
-        width: 20%;
+    .footer-section {
+        margin-bottom: 20px;
         text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-logo {
+        width: 100px;
+        margin: 0 auto 10px auto;
+    }
+
+    .footer-section.links, .footer-section.games, .footer-section.contact {
+        width: 100%;
+        text-align: center; 
+        margin: 0 auto;
     }
 
     nav ul li ul.submenu {
@@ -564,7 +729,7 @@ h1.heading-intro{
     }
 
     .popup{
-        width: 70%;
+        width: 75%;
     }
 }
 

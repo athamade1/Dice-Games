@@ -460,6 +460,11 @@ footer {
         font-size: 20px;
     }
 
+    .h3-dice-score{
+        text-align: center;
+        padding-left: 15%;
+    }
+
     .btn-roll-dice, .btn-clear, .btn-history {
         padding: 8px 15px;
         font-size: 14px;

@@ -10,6 +10,8 @@ var inputValue2 = input2.value;
 
 let h3AttackArmyScoreEl = document.querySelector('.h3-attack-army-score');
 let h3DefenseArmyScoreEl = document.querySelector('.h3-defense-army-score');
+let h3AttackArmyEl=document.querySelector('.h3-attack-army');
+let h3defencearmyEl=document.querySelector('.h3-defence-army');
 
 let imgDiceEl = document.querySelector('.img-dice');
 let imgDice2El = document.querySelector('.img-dice2');
@@ -530,17 +532,32 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
         h3DefenseArmyScoreEl.textContent = inputValue2;
     } else {
         inputValue1 = inputValue1 - 1;
-        h3AttackArmyScoreEl.textContent = inputValue1
+        h3AttackArmyScoreEl.textContent = inputValue1;
         
     }
     if(inputValue1<=0 || inputValue2<=0){
        // btnRollDiceEl.style.opacity = '0.2';
         //console.log('telos');
-        imgDiceEl.style.opacity = '0.2';
-        imgDice2El.style.opacity = '0.2';
-        imgDice3El.style.opacity = '0.2';
-        imgDice4El.style.opacity = '0.2';
-        imgDice5El.style.opacity = '0.2';
+        if (inputValue1<=0){
+            imgDiceEl.style.opacity = '0.2';
+            imgDice2El.style.opacity = '0.2';
+            imgDice3El.style.opacity = '0.2';
+            h3AttackArmyScoreEl.style.display = 'none';
+            h3DefenseArmyScoreEl.style.display='none';
+            h3defencearmyEl.textContent='winner';
+            h3AttackArmyEl.textContent='loser';
+
+        }
+        else if(inputValue2<=0){
+            imgDice4El.style.opacity = '0.2';
+            imgDice5El.style.opacity = '0.2';
+            h3DefenseArmyScoreEl.style.display = 'none';
+            h3AttackArmyScoreEl.style.display = 'none';
+            h3AttackArmyEl.textContent='winner';
+            h3defencearmyEl.textContent='loser';
+
+        }
+        
     
         btnRollDiceEl.style.opacity = '0.2';
         flagArmy = false;
@@ -555,9 +572,9 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
 
         } 
     } 
-    else if(inputValue1==2){
-        imgDice3El.style.opacity = '0.2';
-        }
+  //  else if(inputValue1==2){
+    //    imgDice3El.style.opacity = '0.2';
+      //  }
         
     
     else if(inputValue1==2){
@@ -576,6 +593,7 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
 function init(){
     console.log('init() function run successfully');
     // h3DiceScoreEl.textContent = 'Ρίξε το ζάρι';
+
     imgDice2El.style.width = '15%';
     imgDiceEl.style.width = '15%';
     imgDice3El.style.width = '15%';
@@ -595,6 +613,27 @@ function init(){
     imgDice5El.src = "../images/dice-1.png";
 
     diceHistory = [];
+
+    /*ο κώδικας για το burger menu αρχίζει εδώ*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const navContainer = document.querySelector('.nav-container');
+
+    burger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        navContainer.classList.toggle('active'); 
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!navContainer.contains(e.target) && !burger.contains(e.target)) {
+            navContainer.classList.remove('active');
+        }
+    });
+});
+
+/*ο κώδικας για το burger menu τελειώνει εδώ*/
+
     
     // flag = false;
     const soundButton = document.getElementById('soundButton');
