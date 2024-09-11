@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σχετικά με εμάς Dice Games | Dice Games</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.burger');
+    const navContainer = document.querySelector('.nav-container');
+
+    burger.addEventListener('click', function (e) {
+        e.stopPropagation();
+        navContainer.classList.toggle('active'); 
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!navContainer.contains(e.target) && !burger.contains(e.target)) {
+            navContainer.classList.remove('active');
+        }
+    });
+    });
+    </script>
+
+    <!--FAVICON STARTS HERE-->
+    <link rel="icon" href="../images/logo.pirate.jpeg" type="image/png">
+    <!--FAVICON ENDS HERE-->
+
+    <link rel="stylesheet" href="../styles/aboutus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header menu starts here -->
+    <header>
+        
+        <div class="header-container">
+
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img class="imglogo" src="../images/logo.pirate.transparent.png" alt=" pirate's skull with dice">
+                </a>
+            </div>
+            
+            <div class="nav-container">
+                <nav class="nav-list">
+                    <ul>
+                        <li><a href="index.html">Αρχική</a></li>
+                        <li><a href="pages/aboutus">Σχετικά με εμάς</a></li>
+                        
+                        <li>
+                            <a href="#">Παιχνίδια</a>
+                            <ul class="submenu">
+                                <li><a href="pages/zaria.html">Ζάρια</a></li>
+                                <li><a href="pages/catan.html">Κατάν</a></li>
+                                <li><a href="pages/#">D & D</a></li>
+                                <li><a href="pages/risk.html">Risk</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="pages/epikoinonia.html">Επικοινωνία</a></li>
+
+                        
+                    </ul>
+                </nav>
+            </div>
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+
+        </div>
+    </header>
+    <!-- Header menu ends here -->
+
+    <div class="intro">
+        <h3 class="heading-intro">Σχετικά με το</h3>
+        <h1 class="heading-intro">DICE <img class="image-for-hero-section" src="../images/logo.pirate.transparent.png"> GAMES</h1>
+        <p>Το Dice Games είναι μια εφαρμογή που δημιουργήθηκε για να βοηθήσει τους παίκτες επιτραπέζιων παιχνιδιών να 
+        έχουν τα ζάρια στο κινητό τους χωρίς να χρειάζεται να καταβάλουν χώρο στο τραπέζι για να ρίχνουν πραγματικά ζάρια.</p>  
+            
+        <p>Η εφαρμογή αυτή δημιουργήθηκε για εκπαιδευτικούς σκοπούς από τους μαθητές τμήματος Κατασκευής Ιστοσελίδων σε σεμινάριο του 
+        Κέντρου Δια Βίου Μάθησης ΚΕΜ. Ο αρχικός σκοπός ήτανε να εξοικειωθούν οι εκπαιδευόμενοι με τη γλώσσα προγραμματισμού JavaScript. 
+        Κατά την εξέλιξη του project πήραμε την απόφαση να ανεβάσουμε την εφαρμογή στο Internet με Domain Name: <a href="https://zaria.gr">zaria.gr</a></p>
+    </div>
+
+    <section class="team">
+        <h3>Η Ομάδα μας</h3>
+        <p class="prin">Στο project συμμετείχαν ενεργά ο εκπαιδευτής του τμήματος καθώς και οι παρακάτω contributors:</p>
+        <div class="card">
+            <img src="../images/female-icon-thegem-person-80.webp" alt="Μαδεμλής Αθανάσιος">
+            <h4>Μαδεμλής Αθανάσιος</h4>
+            <p>Project Leader</p>
+            <div class="social-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/thanasis_asold/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/athanasios-mademlis/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/athamade1"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/female-icon-thegem-person-80.webp" alt="Μπάλη Πανωραία">
+            <h4>Μπάλη Πανωραία</h4>
+            <p>Contributor</p>
+            <div class="social-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/female-icon-thegem-person-80.webp" alt="Μπαρδάνη Αννέζα">
+            <h4>Μπαρδάνη Αννέζα</h4>
+            <p>Contributor</p>
+            <div class="social-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/female-icon-thegem-person-80.webp" alt="Παναγιωτίδου Δέσποινα">
+            <h4>Παναγιωτίδου Δέσποινα</h4>
+            <p>Contributor</p>
+            <div class="social-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../images/female-icon-thegem-person-80.webp" alt="Στασινός Φώτιος">
+            <h4>Στασινός Φώτιος</h4>
+            <p>Contributor</p>
+            <div class="social-buttons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-solid fa-link"></i></a>
+            </div>
+        </div>
+        <p>Βοήθεια υπήρξε και από τους λοιπούς μαθητές:
+            Αποστολόπουλος Χρήστος, Γιαννοπούλου Μαρία, Καλοκαίρης Ελευθέριος, Καούρα Χαρίκλεια, Κεφαλάς Γεώργιος, Λαμπρόπουλος Νικόλαος, Μιχαλόπουλος Μάριος, Μούτου Δήμητρα, Παπαδιαμάντης Ιωάννης, Σαρανταρίδης Δημήτριος, Σκαρμούτσου Μαρία, Στέλλιου Στυλιανός, Τριαντάφυλλος Δημοσθένης, Υφαντή Ειρήνη και Ψαραύτης Αλέξανδρος.</p>
+    </section>
+    <h3 class="ourgames">Τα Παιχνίδια μας</h3>
+    <div class="container-1">
+        <div class="container-1-1">
+            <h3 class="container-titles">ΖΑΡΙΑ</h3>
+            <a href="../pages/zaria.html"><img class="img-home-games" src="../images/wallpapers/tavli-wallpaper-2.webp" alt=""></a>
+        </div>
+        
+        <div class="container-1-4">
+            <h3 class="container-titles">CATAN</h3>
+            <a href="../pages/catan.html"><img class="img-home-games" src="../images/wallpapers/tavli-wallpaper-2.webp" alt=""></a>
+        </div>
+
+        <div class="container-1-5">
+            <h3 class="container-titles">D & D</h3>
+            <a href="#"><img class="img-home-games" src="../images/wallpapers/tavli-wallpaper-2.webp" alt=""></a>
+        </div>
+
+        <div class="container-1-6">
+          <h3 class="container-titles">Risk</h3>
+          <a href="../pages/risk.html"><img class="img-home-games" src="../images/wallpapers/tavli-wallpaper-2.webp" alt=""></a>
+      </div>
+    </div>
+</div>
+
+    <!-- footer menu starts here -->
+<footer>
+    <div class="footer-container">
+      <!-- Left section -->
+      <div class="footer-section contact">
+        <a href="../index.html">
+          <img src="../images/logo.pirate.transparent.png" alt="pirate's skull eating a dice" class="footer-logo">
+        </a>
+        <p>Copyright © 2024 Dice Games<br>Powered by <a href="#">EM Digital</a></p>
+        
+      </div>
+  
+      <!-- Center section -->
+      <div class="footer-section links">
+        <h4>Επικοινωνία</h4>
+        <div class="social-links">
+          <p>📧 <a href="mailto:athamade1@gmail.com">athamade1@gmail.com</a></p>
+          <p>📧 <a href="tel:+306943080823">+30 694 308 0823</a></p>
+        </div>
+        
+      </div>
+  
+      <div class="footer-section links">
+          <h4>Χρήσιμοι Σύνδεσμοι</h4>
+          <div class="social-links">
+            <a href="https://www.instagram.com/thanasis_asold/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/athanasios-mademlis/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/athamade1"><i class="fab fa-github"></i></a>
+          </div>
+          <a href="#">Πολιτική Απορρήτου</a>
+        </div>
+  
+      <!-- Right section -->
+      <div class="footer-section games">
+        <h4>Παιχνίδια</h4>
+        <li><a href="pages/zaria.html">Ζάρια</a></li>
+        <li><a href="pages/catan.html">Κατάν</a></li>
+        <li><a href="#">Dungeons & Dragons</a></li>
+        <li><a href="pages/risk.html">Risk</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- footer menu ends here -->
+
+    
+</body>
+</html>
