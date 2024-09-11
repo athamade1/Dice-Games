@@ -419,6 +419,18 @@ section {
 
 @media (max-width: 768px) {
 
+    .card {
+    width: calc(45% - 40px);
+  }
+
+  .team h3 {
+    font-size: 2em;
+  }
+
+  .prin {
+    font-size: 90%;
+  }
+
     .main-container {
         padding: 20px 0 50px 0;
         background-size:cover;
