@@ -457,18 +457,18 @@ nav ul li ul.submenu li a:hover{
     grid-template-columns: 1fr 1fr; 
     gap: 10px; 
     justify-items: center;
-    /* display: grid;
+    display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    justify-items: center; */
+    justify-items: center;
 }
 
 .container-1-1, .container-1-2, .container-1-3, .container-1-4, .container-1-5, .container-1-6 {
     padding-right: 15%;
     width: 80%;
     box-shadow: none;
-    /* width: 70%;
-    padding-right: 8%; */
+    width: 70%;
+    padding-right: 8%;
 }
 
 .img-home-games {
