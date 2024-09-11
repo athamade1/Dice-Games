@@ -317,10 +317,17 @@ section {
     text-align: center;
 }
 .team {
+    background-color: #966841;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+.p-text{
+    margin: 0 auto;
+    width: 60%;
 }
 
 .card {
