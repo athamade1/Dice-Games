@@ -216,86 +216,120 @@ li {
 
 /* footer */
 footer {
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    margin: 0;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-section {
-    flex: 1;
-    margin: 0 15px;
-  }
-  
-  .footer-section.contact,
-  .footer-section.links,
-  .footer-section.games {
-    text-align: left;
-  }
-  
-  .footer-logo {
-    width: 100px; 
-    margin-bottom: 10px;
-  }
-  
-  .footer-section.links .social-links {
-    margin: 10px 0;
-  }
-  
-  .footer-section.links .social-links a {
-    color: #fff;
-    margin-right: 10px;
-    font-size: 18px;
-  }
-  
-  .footer-section a {
-    color: #00f;
-    text-decoration: none;
-  }
-  
-  .footer-section a:hover {
-    text-decoration: underline;
-  }
-  
-  .rate-me {
-    display: block;
-    margin-top: 10px;
-    color: #00f;
-  }
-  
-  .footer-section h4 {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  .footer-section.games ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .footer-section.games ul li {
-    margin-bottom: 5px;
-  }
-  
-  .footer-section.games ul li a {
-    color: #00f;
-    text-decoration: none;
-  }
-  
-  .footer-section.games ul li a:hover {
-    text-decoration: underline;
-  }
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.footer-section.contact,
+.footer-section.links,
+.footer-section.games {
+  text-align: left;
+}
+
+.footer-section.contact {
+  text-align: center;
+}
+
+.footer-logo {
+  width: 100px; 
+  margin: 0 auto 10px auto;
+  display: block;
+}
+
+.footer-section.links .social-links {
+  margin: 10px 0;
+}
+
+.footer-section.links .social-links a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.footer-section a {
+  color: #87ceeb;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #87ceeb;
+  text-decoration: underline;
+}
+
+.rate-me {
+  display: block;
+  margin-top: 10px;
+  color: #00f;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Προσαρμογή της λίστας για καλλιτεχνικά γράμματα DICE */
+.footer-section.games ul {
+  list-style: none; /* Αφαίρεση των κουκκίδων */
+  padding: 0;
+  margin-left: 20px;
+}
+
+.footer-section.games ul li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px; /* + χώρο για τα καλλιτεχνικά γράμματα */
+}
+
+.footer-section.games ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
+  font-family: 'Lobster', cursive; /* Καλλιτεχνική γραμματοσειρά */
+  color: red; /* Κόκκινο χρώμα για τα γράμματα D, I, C, E */
+}
+
+/* Προσθήκη των γραμμάτων D, I, C, E */
+.footer-section.games ul li:nth-child(1)::before {
+  content: "D";
+}
+
+.footer-section.games ul li:nth-child(2)::before {
+  content: "I";
+}
+
+.footer-section.games ul li:nth-child(3)::before {
+  content: "C";
+}
+
+.footer-section.games ul li:nth-child(4)::before {
+  content: "E";
+}
+
+.footer-section.games ul li a {
+  color: #87ceeb;
+  text-decoration: none;
+}
+
+.footer-section.games ul li a:hover {
+  text-decoration: underline;
+}
   /*footer ends here*/
 
 .burger {
