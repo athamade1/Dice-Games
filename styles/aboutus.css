@@ -592,6 +592,13 @@ footer {
     font-size: 24px;
   }
 
+  .p-text{
+    width: 90%
+  }
+  .ourgames{
+    font-size: 27px;
+  }
+
 }
 
 /*----------------Responsive for phones code ends here-----------*/
