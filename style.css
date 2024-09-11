@@ -288,7 +288,7 @@ footer {
 .footer-section.games ul li {
   position: relative;
   margin-bottom: 10px;
-  padding-left: 30px; /* + χώρο για τα καλλιτεχνικά γράμματα */
+  padding-left: 30px; /* Προσθέτουμε χώρο για τα καλλιτεχνικά γράμματα */
 }
 
 .footer-section.games ul li::before {
@@ -327,6 +327,15 @@ footer {
   text-decoration: underline;
 }
 
+/* Ευθυγράμμιση εικονιδίου φακέλου δίπλα στο email */
+.footer-section .social-links p {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-section .social-links p i {
+  margin-right: 8px; 
+}
 .burger {
   display: none;
   cursor: pointer;
