@@ -343,6 +343,14 @@ footer {
 .footer-section.games ul li a:hover {
   text-decoration: underline;
 }
+.footer-section .social-links p {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-section .social-links p i {
+    margin-right: 8px; 
+  }
 .burger {
   display: none;
   cursor: pointer;
