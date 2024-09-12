@@ -357,8 +357,8 @@ section {
 
 .card img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: auto;
     object-fit: cover;
     margin-bottom: 15px;
 }
