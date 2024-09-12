@@ -518,7 +518,7 @@ function battle(dice1, dice2, dice3, dice4, dice5){
 }
 
 function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2){
-    if (max1Player1 >= max1Player2){
+    if (max1Player1 > max1Player2){
         inputValue2 = inputValue2 - 1;
         
         h3DefenseArmyScoreEl.textContent = inputValue2;
@@ -528,7 +528,7 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
        
     }
 
-    if (max2Player1 >= max2Player2){
+    if (max2Player1 > max2Player2){
         inputValue2 = inputValue2 - 1;
         
         h3DefenseArmyScoreEl.textContent = inputValue2;
@@ -540,13 +540,13 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
     if(inputValue1<=0 || inputValue2<=0){
        // btnRollDiceEl.style.opacity = '0.2';
         //console.log('telos');
-        if (inputValue1<=0){
+        if (inputValue1<=0 ){
             imgDiceEl.style.opacity = '0.2';
             imgDice2El.style.opacity = '0.2';
             imgDice3El.style.opacity = '0.2';
             h3AttackArmyScoreEl.style.display = 'unset';
             h3defencearmyEl.textContent='Νικητής! Στρατός Αμυνόμενου:';
-            h3AttackArmyEl.textContent='Χαμένος :( Στρατός Επιτιθέμενου:';
+            h3AttackArmyEl.textContent='Χαμένος:';
             input1.value=0;
             input2.value=0;
 
@@ -561,6 +561,7 @@ function compareAndKillSholdiers(max1Player1,max2Player1,max1Player2,max2Player2
             input2.value=0;
 
         }
+       
         
     
         btnRollDiceEl.style.opacity = '0.2';
