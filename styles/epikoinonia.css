@@ -85,8 +85,8 @@ nav ul li a {
     transition: background-color 0.1s ease;
 }
 
-nav ul li a:hover {
-    background-color: #1E90FF; /* hover */
+header nav ul li a:hover {
+  background-color: #1E90FF; /* hover */
 }
 /* ------------------------- header ends here-------------------------*/
 
@@ -136,56 +136,64 @@ nav ul li ul.submenu li a:hover {
 /*------------------------- παιχνιδια submenu ends here-------------------------*/
 
 
+/* ------------------------ body starts here -----------------------------------*/
 
 
 .heading-intro-info{
     text-align: center;
 }
 
-h1.heading-intro-info{
+.heading-intro-info{
     font-size: 50px;
 }
 
-.contact-container{
+.contact-container-gen{
     margin: 0 auto;
-    background-color: #ffffff9d; /* White with 50% transparency */
-    padding: 50px 0 50px 0;
-    width: 55%;
+    background-color: #ffffff6d; /* White with 50% transparency */
+    padding: 50px 0 40px 0;
+    width: 60%;
+    margin-bottom: 30px; /* Adjusts the bottom margin, reducing space below the container */
     border-radius: 10px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.234); /* Example box shadow */
 
     display: flex; /* mazi me tis apo katw kentraroun ola ta items tou container*/
     justify-content: center;
-    align-items: center;
-    gap: 60px;
+    align-items: flex-start; /* Aligns child containers at the top */
+    gap: 40px;
 }
 
-.contact-container-1{
+.contact-container-1 {
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
     background-color: rgba(255, 228, 196, 0.590);
     
 }
 
-ul {
+ .contact-info ul, .links ul {
     list-style-type: none; /* Removes bullets */
     padding: 0;            /* Removes default padding */
     margin: 0;             /* Removes default margin */
     text-decoration: none;
-}
-
-li {
     display: flex;         /* Makes list items display inline */
-    align-items: center;   /* Vertically centers the icon and text */
+    flex-direction: column; /*displays items as a column*/
+    align-items: flex-start; /* Aligns icons and text to the left */
     margin-bottom: 10px;   /* Adds some spacing between list items */
+ }
+    
+    
+  .contact-info li, .links li {
+      display: flex;
+      align-items: center; /* Vertically aligns the icon with the text */
+      margin-bottom: 10px; /* Adds space between the list items */
+  }
 
-}
 
 /* Styling for the links and icons */
 .contact-info a, .links a {
     color: black;
     text-decoration: none;
     margin-left: 8px; /* Adds space between the icon and the link text */
+    flex-grow: 1;     /* Ensures the text fills available space */
 }
 
 .contact-info a:hover, .links a:hover, .more-info a:hover {
@@ -195,14 +203,16 @@ li {
 
 .contact-info i, .links i {
     margin-right: 8px; /* Adds space between the icon and the link text */
+    min-width: 20px;    /* Ensures icons are the same width to align text */
+    text-align: center; /* Centers the icon horizontally */
 }
 
 
-.contact-container-2{
-    padding: 20px 20px 20px 20px;
+.contact-container-2 {
+    padding: 20px 60px 20px 60px;
     border-radius: 10px;
     background-color:  rgba(255, 228, 196, 0.590);
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 
 }
 
@@ -213,6 +223,8 @@ li {
     margin-left: 8px; /* Adds space between the icon and the link text */  
 
 }
+
+/* ------------------------------ body ends here ------------------------------*/
 
 /* footer */
 footer {
