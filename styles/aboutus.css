@@ -441,8 +441,9 @@ section {
 
 @media (max-width: 768px) {
 
-    .card {
-    width: calc(45% - 40px);
+ .card {
+    width: 100%; 
+    margin-bottom: 20px;
   }
 
   .team h3 {
