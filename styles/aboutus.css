@@ -253,9 +253,14 @@ footer {
   text-align: left;
 }
 
+.footer-section.contact {
+  text-align: center;
+}
+
 .footer-logo {
   width: 100px; 
-  margin-bottom: 10px;
+  margin: 0 auto 10px auto;
+  display: block;
 }
 
 .footer-section.links .social-links {
@@ -269,11 +274,12 @@ footer {
 }
 
 .footer-section a {
-  color: #00f;
+  color: #87ceeb;
   text-decoration: none;
 }
 
 .footer-section a:hover {
+  color: #87ceeb;
   text-decoration: underline;
 }
 
@@ -288,17 +294,48 @@ footer {
   font-size: 16px;
 }
 
+/* Προσαρμογή της λίστας για καλλιτεχνικά γράμματα DICE */
 .footer-section.games ul {
-  list-style-type: none;
+  list-style: none; /* Αφαίρεση των κουκκίδων */
   padding: 0;
+  margin-left: 20px;
 }
 
 .footer-section.games ul li {
-  margin-bottom: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px; /* Προσθέτουμε χώρο για τα καλλιτεχνικά γράμματα */
+}
+
+.footer-section.games ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
+  font-family: 'Lobster', cursive; /* Καλλιτεχνική γραμματοσειρά */
+  color: red; /* Κόκκινο χρώμα για τα γράμματα D, I, C, E */
+}
+
+/* Προσθήκη των γραμμάτων D, I, C, E */
+.footer-section.games ul li:nth-child(1)::before {
+  content: "D";
+}
+
+.footer-section.games ul li:nth-child(2)::before {
+  content: "I";
+}
+
+.footer-section.games ul li:nth-child(3)::before {
+  content: "C";
+}
+
+.footer-section.games ul li:nth-child(4)::before {
+  content: "E";
 }
 
 .footer-section.games ul li a {
-  color: #00f;
+  color: #87ceeb;
   text-decoration: none;
 }
 
@@ -306,13 +343,15 @@ footer {
   text-decoration: underline;
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
+/* Ευθυγράμμιση εικονιδίου φακέλου δίπλα στο email */
+.footer-section .social-links p {
+  display: inline-flex;
+  align-items: center;
 }
 
+.footer-section .social-links p i {
+  margin-right: 8px; 
+}
 .burger span {
   width: 25px;
   height: 3px;
