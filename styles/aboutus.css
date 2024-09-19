@@ -352,6 +352,12 @@ footer {
 .footer-section .social-links p i {
   margin-right: 8px; 
 }
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
 .burger span {
   width: 25px;
   height: 3px;
