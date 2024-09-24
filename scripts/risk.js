@@ -212,7 +212,7 @@ btnHistoryEl.addEventListener('click', function(){
     diceHistory.forEach((entry, index) => {// κάθε νέα είσοδος (entry) μπαίνει στη λίστα του ιστορικού (diceHistory)
         let listItem = document.createElement('li');//δημιουργείται νέο στοιχείο για τη λίστα
         // listItem.textContent = `Roll ${index + 1}: Dice 1 = ${entry.dice1}, Dice 2 = ${entry.dice2}, Dice 3 ${entry.test}`;//δημιουργεί το περιεχομένο του στοιχείου της λίστας βάσει της εκάστοτε ρίψης
-        listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: blue;">${entry.dice1}</span>\u00A0\u00A0<span style="color: blue;">${entry.dice2}</span> \u00A0<span style="color: blue;">${entry.dice3}</span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.dice4}</span></span>\u00A0\u00A0Sum: <span style="color: blue;">${entry.dice5}</span>`;
+        listItem.innerHTML = `Roll ${index + 1}:\u00A0<span style="color: red;">${entry.dice1}</span>\u00A0\u00A0<span style="color: red;">${entry.dice2}</span> \u00A0<span style="color: red;">${entry.dice3}</span>\u00A0\u00A0 VS \u00A0\u00A0<span style="color: blue;">${entry.dice4}</span></span>\u00A0\u00A0<span style="color: blue;">${entry.dice5}</span>`;
         historyListEl.appendChild(listItem); //με τη μέθοδο appendChild, προσθέτει το νέο στοιχείο της λίστας στο γονικό, δλδ στο ιστορικό που έχει δημιουργηθεί
     
    // console.log(pirate);
